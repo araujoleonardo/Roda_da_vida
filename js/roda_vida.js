@@ -3,29 +3,17 @@ $(document).ready(()=>{
     "type": "radar",
     "theme": "light",
     "dataProvider": [ {
-      "country": "Familia"
+      "country": "Habilidades e Competências"
     }, {
-      "country": "Relação Amorosa"
+      "country": "Nivelamento"
     }, {
-      "country": "Vida Social"
+      "country": "Estratégias e Hábitos de Estudo"
     }, {
-      "country": "Espiritualidade"
+      "country": "Saúde Física"
     }, {
-      "country": "Hobbies e Diversão"
+      "country": "Saúde Mental"
     }, {
-      "country": "Plenitude e Felicidade"
-    }, {
-      "country": "Contribuição Social"
-    }, {
-      "country": "Recursos Financeiros"
-    }, {
-      "country": "Realização e Propósito"
-    }, {
-      "country": "Saúde e Disposição"
-    }, {
-      "country": "Equilíbrio Emocional "
-    }, {
-      "country": "Desenvolvimento Intelectual"
+      "country": "Bem-Estar"
     } ],
     "valueAxes": [ {
       "gridType": "circles",
@@ -97,7 +85,7 @@ $(document).ready(()=>{
   })
 
   function inserirDadosNaRoda(){
-    $("#quiz2, #quiz3, #quiz4, #quiz5, #quiz6, #quiz7, #quiz8, #quiz9, #quiz10, #quiz11, #quiz12, #resultado").hide()
+    $("#quiz2, #quiz3, #quiz4, #quiz5, #quiz6, #resultado").hide()
 
     class areasVidas {
       constructor(area, nota){
@@ -106,9 +94,9 @@ $(document).ready(()=>{
       }
     }
     
-    // ******************************************* AREA FAMILIA *******************************************
+    // ******************************************* AREA APRENDIZAGEM E DESENVOLVIMENTO *******************************************
     $("#btn1").click(()=>{
-      let inputes = document.querySelectorAll("input.areaFamilia")
+      let inputes = document.querySelectorAll("input.areaAprendizagemDesenvolvimento")
 
       let valor0 = inputes[0].value
       if(valor0 == "") {valor0 = 0}
@@ -122,38 +110,30 @@ $(document).ready(()=>{
       if(valor2 == "") {valor2 = 0}
       valor2 = parseInt(valor2)
 
-      let valor3 = inputes[3].value
-      if(valor3 == "") {valor3 = 0}
-      valor3 = parseInt(valor3)
-    
-      let valor4 = inputes[4].value
-      if(valor4 == "") {valor4 = 0}
-      valor4 = parseInt(valor4)
-
-      if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
+      if(valor0 < 0 || valor1 < 0 || valor2 < 0){
         alert('insira uma nota válida!')
-      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
+      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
         alert('insira uma nota válida!')
       }
       else{
-        mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
+        mediaTudo = (valor0 + valor1 + valor2) / 3
         console.log(mediaTudo)
         setValue(0, Math.round(mediaTudo))
 
         // salvando no logalStorage
         let salvarBD = new areasVidas(0, Math.round(mediaTudo))
         let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("areaFamilia", salvando)
+        localStorage.setItem("areaAprendizagemDesenvolvimento", salvando)
 
-        $("#titleQ").html('Relação Amorosa <i class="fas fa-heart"></i>')
+        $("#titleQ").html('Nivelamento')
         $("#quiz1").remove()
         $("#quiz2").show()
       }
     })
     
-    // ******************************************* AREA RELACAO AMOROSA *******************************************
+    // ******************************************* AREA NIVELAMENTO *******************************************
     $("#btn2").click(()=>{
-      let inputes = document.querySelectorAll("input.areaRelAmor")
+      let inputes = document.querySelectorAll("input.areaNivelamento")
       
 
       let valor0 = inputes[0].value
@@ -168,37 +148,29 @@ $(document).ready(()=>{
       if(valor2 == "") {valor2 = 0}
       valor2 = parseInt(valor2)
 
-      let valor3 = inputes[3].value
-      if(valor3 == "") {valor3 = 0}
-      valor3 = parseInt(valor3)
-    
-      let valor4 = inputes[4].value
-      if(valor4 == "") {valor4 = 0}
-      valor4 = parseInt(valor4)
-
-      if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
+      if(valor0 < 0 || valor1 < 0 || valor2 < 0){
         alert('insira uma nota válida!')
-      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
+      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
         alert('insira uma nota válida!')
       }
       else{
-        mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
+        mediaTudo = (valor0 + valor1 + valor2) / 3
         console.log(mediaTudo)
         setValue(1, Math.round(mediaTudo))
 
         let salvarBD = new areasVidas(1, Math.round(mediaTudo))
         let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("areaRelAmor", salvando)
+        localStorage.setItem("areaNivelamento", salvando)
 
-        $("#titleQ").html('Vida Social <i class="fas fa-users"></i>')
+        $("#titleQ").html('Estratégias e Hábitos de Estudo <i class="fas fa-users"></i>')
         $("#quiz2").remove()
         $("#quiz3").show() 
       }    
     })
     
-    // ******************************************* AREA VIDA SOCIAL *******************************************
+    // ******************************************* AREA ESTRATÉGIA E HABITOS DE ESTUDO *******************************************
     $("#btn3").click(()=>{
-      let inputes = document.querySelectorAll("input.vidSocial")
+      let inputes = document.querySelectorAll("input.estHabitoEstudo")
       
 
         let valor0 = inputes[0].value
@@ -213,36 +185,28 @@ $(document).ready(()=>{
         if(valor2 == "") {valor2 = 0}
         valor2 = parseInt(valor2)
 
-        let valor3 = inputes[3].value
-        if(valor3 == "") {valor3 = 0}
-        valor3 = parseInt(valor3)
-      
-        let valor4 = inputes[4].value
-        if(valor4 == "") {valor4 = 0}
-        valor4 = parseInt(valor4)
-
-        if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
+        if(valor0 < 0 || valor1 < 0 || valor2 < 0){
           alert('insira uma nota válida!')
-        }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
+        }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
           alert('insira uma nota válida!')
         }else{
-        mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
+        mediaTudo = (valor0 + valor1 + valor2) / 3
         console.log(mediaTudo)
         setValue(2, Math.round(mediaTudo))
 
         let salvarBD = new areasVidas(2, Math.round(mediaTudo))
         let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("vidSocial", salvando)
+        localStorage.setItem("estHabitoEstudo", salvando)
 
-        $("#titleQ").html('Espiritualidade <i class="fab fa-empire"></i>')
+        $("#titleQ").html('Saúde Física')
         $("#quiz3").remove()
         $("#quiz4").show()
       }
     })
 
-    // ******************************************* AREA VIDA Espitirualidade *******************************************
+    // ******************************************* AREA SAÚDE FISICA *******************************************
     $("#btn4").click(()=>{
-      let inputes = document.querySelectorAll("input.espiritualidade")
+      let inputes = document.querySelectorAll("input.saudeFisica")
       
 
       let valor0 = inputes[0].value
@@ -257,35 +221,27 @@ $(document).ready(()=>{
       if(valor2 == "") {valor2 = 0}
       valor2 = parseInt(valor2)
 
-      let valor3 = inputes[3].value
-      if(valor3 == "") {valor3 = 0}
-      valor3 = parseInt(valor3)
-    
-      let valor4 = inputes[4].value
-      if(valor4 == "") {valor4 = 0}
-      valor4 = parseInt(valor4)
-
-      if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
+      if(valor0 < 0 || valor1 < 0 || valor2 < 0){
         alert('insira uma nota válida!')
-      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
+      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
         alert('insira uma nota válida!')
       }else{
-        mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
+        mediaTudo = (valor0 + valor1 + valor2) / 3
         setValue(3, Math.round(mediaTudo))
 
         let salvarBD = new areasVidas(3, Math.round(mediaTudo))
         let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("espiritualidade", salvando)
+        localStorage.setItem("saudeFisica", salvando)
 
-        $("#titleQ").text('Hobbies e Diversão')
+        $("#titleQ").text('Saúde Mental')
         $("#quiz4").remove()
         $("#quiz5").show() 
       }    
     })
 
-    // ******************************************* AREA VIDA HOBBIES *******************************************
+    // ******************************************* AREA SAÚDE MENTAL *******************************************
     $("#btn5").click(()=>{
-      let inputes = document.querySelectorAll("input.hobbiesDiversao")
+      let inputes = document.querySelectorAll("input.saudeMental")
       
 
       let valor0 = inputes[0].value
@@ -300,34 +256,26 @@ $(document).ready(()=>{
       if(valor2 == "") {valor2 = 0}
       valor2 = parseInt(valor2)
 
-      let valor3 = inputes[3].value
-      if(valor3 == "") {valor3 = 0}
-      valor3 = parseInt(valor3)
-    
-      let valor4 = inputes[4].value
-      if(valor4 == "") {valor4 = 0}
-      valor4 = parseInt(valor4)
-
-      if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
+      if(valor0 < 0 || valor1 < 0 || valor2 < 0){
         alert('insira uma nota válida!')
-      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
+      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
         alert('insira uma nota válida!')
-      }else{mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
+      }else{mediaTudo = (valor0 + valor1 + valor2) / 3
         setValue(4, Math.round(mediaTudo))
 
         let salvarBD = new areasVidas(4, Math.round(mediaTudo))
         let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("hobbiesDiversao", salvando)
+        localStorage.setItem("saudeMental", salvando)
 
-        $("#titleQ").text('Plenitude e Felicidade')
+        $("#titleQ").text('Bem-Estar')
         $("#quiz5").remove()
         $("#quiz6").show()
       }  
     })
 
-    // ******************************************* AREA VIDA Plenitude e Felicidade *******************************************
+    // ******************************************* AREA VIDA BEM-ESTAR *******************************************
     $("#btn6").click(()=>{
-      let inputes = document.querySelectorAll("input.plenitudeFeliz")
+      let inputes = document.querySelectorAll("input.bemEstar")
       
 
       let valor0 = inputes[0].value
@@ -342,286 +290,24 @@ $(document).ready(()=>{
       if(valor2 == "") {valor2 = 0}
       valor2 = parseInt(valor2)
 
-      let valor3 = inputes[3].value
-      if(valor3 == "") {valor3 = 0}
-      valor3 = parseInt(valor3)
-    
-      let valor4 = inputes[4].value
-      if(valor4 == "") {valor4 = 0}
-      valor4 = parseInt(valor4)
-
-      if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
+      if(valor0 < 0 || valor1 < 0 || valor2 < 0){
         alert('insira uma nota válida!')
-      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
+      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
         alert('insira uma nota válida!')
       }
       else{
-        mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
+        mediaTudo = (valor0 + valor1 + valor2) / 3
         setValue(5, Math.round(mediaTudo))
 
         let salvarBD = new areasVidas(5, Math.round(mediaTudo))
         let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("plenitudeFeliz", salvando)
+        localStorage.setItem("bemEstar", salvando)
 
-        $("#titleQ").text('Contribuição Social')
+        $("#titleQ").text('Resultado')
         $("#quiz6").remove()
-        $("#quiz7").show() 
+        $("#resultado").show() 
         }    
-    })
-
-    // ******************************************* AREA VIDA Contribuicao Social *******************************************
-    $("#btn7").click(()=>{
-      let inputes = document.querySelectorAll("input.contrbSocial")
-      
-      let valor0 = inputes[0].value
-      if(valor0 == "") {valor0 = 0}
-      valor0 = parseInt(valor0)      
-
-      let valor1 = inputes[1].value
-      if(valor1 == "") {valor1 = 0}
-      valor1 = parseInt(valor1)
-
-      let valor2 = inputes[2].value
-      if(valor2 == "") {valor2 = 0}
-      valor2 = parseInt(valor2)
-
-      let valor3 = inputes[3].value
-      if(valor3 == "") {valor3 = 0}
-      valor3 = parseInt(valor3)
-    
-      let valor4 = inputes[4].value
-      if(valor4 == "") {valor4 = 0}
-      valor4 = parseInt(valor4)
-
-      if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
-        alert('insira uma nota válida!')
-      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
-        alert('insira uma nota válida!')
-      }
-      else{
-        mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
-        setValue(6, Math.round(mediaTudo))
-
-        let salvarBD = new areasVidas(6, Math.round(mediaTudo))
-        let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("contrbSocial", salvando)
-  
-        $("#titleQ").text('Recursos Financeiros')
-        $("#quiz7").remove()
-        $("#quiz8").show()  
-      }   
-    })
-
-    // ******************************************* AREA VIDA Recursos Financeiros *******************************************
-    $("#btn8").click(()=>{
-      let inputes = document.querySelectorAll("input.recFinancas")
-      
-      let valor0 = inputes[0].value
-      if(valor0 == "") {valor0 = 0}
-      valor0 = parseInt(valor0)      
-
-      let valor1 = inputes[1].value
-      if(valor1 == "") {valor1 = 0}
-      valor1 = parseInt(valor1)
-
-      let valor2 = inputes[2].value
-      if(valor2 == "") {valor2 = 0}
-      valor2 = parseInt(valor2)
-
-      let valor3 = inputes[3].value
-      if(valor3 == "") {valor3 = 0}
-      valor3 = parseInt(valor3)
-    
-      let valor4 = inputes[4].value
-      if(valor4 == "") {valor4 = 0}
-      valor4 = parseInt(valor4)
-
-      if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
-        alert('insira uma nota válida!')
-      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
-        alert('insira uma nota válida!')
-      }
-      else{
-        mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
-        setValue(7, Math.round(mediaTudo))
-
-        let salvarBD = new areasVidas(7, Math.round(mediaTudo))
-        let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("recFinancas", salvando)
-  
-        $("#titleQ").text('Realização e Propósito')
-        $("#quiz8").remove()
-        $("#quiz9").show() 
-      }    
-    })
-
-    // ******************************************* AREA VIDA Realização e Propósito *******************************************
-    $("#btn9").click(()=>{
-      let inputes = document.querySelectorAll("input.relProposito")
-
-      let valor0 = inputes[0].value
-      if(valor0 == "") {valor0 = 0}
-      valor0 = parseInt(valor0)      
-
-      let valor1 = inputes[1].value
-      if(valor1 == "") {valor1 = 0}
-      valor1 = parseInt(valor1)
-
-      let valor2 = inputes[2].value
-      if(valor2 == "") {valor2 = 0}
-      valor2 = parseInt(valor2)
-
-      let valor3 = inputes[3].value
-      if(valor3 == "") {valor3 = 0}
-      valor3 = parseInt(valor3)
-    
-      let valor4 = inputes[4].value
-      if(valor4 == "") {valor4 = 0}
-      valor4 = parseInt(valor4)
-
-      if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
-        alert('insira uma nota válida!')
-      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
-        alert('insira uma nota válida!')
-      }else{
-        mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
-        setValue(8, Math.round(mediaTudo))
-
-        let salvarBD = new areasVidas(8, Math.round(mediaTudo))
-        let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("relProposito", salvando)
-
-        $("#titleQ").text('Saúde e Disposição')
-        $("#quiz9").remove()
-        $("#quiz10").show() 
-      }    
-    })
-
-    // ******************************************* AREA VIDA Saúde e Disposição *******************************************
-    $("#btn10").click(()=>{
-      let inputes = document.querySelectorAll("input.saudeDisp")
-    
-      let valor0 = inputes[0].value
-      if(valor0 == "") {valor0 = 0}
-      valor0 = parseInt(valor0)      
-
-      let valor1 = inputes[1].value
-      if(valor1 == "") {valor1 = 0}
-      valor1 = parseInt(valor1)
-
-      let valor2 = inputes[2].value
-      if(valor2 == "") {valor2 = 0}
-      valor2 = parseInt(valor2)
-
-      let valor3 = inputes[3].value
-      if(valor3 == "") {valor3 = 0}
-      valor3 = parseInt(valor3)
-    
-      let valor4 = inputes[4].value
-      if(valor4 == "") {valor4 = 0}
-      valor4 = parseInt(valor4)
-
-      if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
-        alert('insira uma nota válida!')
-      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
-        alert('insira uma nota válida!')
-      }else{
-        mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
-        setValue(9, Math.round(mediaTudo))
-
-        let salvarBD = new areasVidas(9, Math.round(mediaTudo))
-        let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("saudeDisp", salvando)
-
-        $("#titleQ").text('Equilíbrio Emocional')
-        $("#quiz10").remove()
-        $("#quiz11").show() 
-      }    
-    })
-
-    // ******************************************* AREA VIDA Equilíbrio Emocional *******************************************
-    $("#btn11").click(()=>{
-      let inputes = document.querySelectorAll("input.equiEmo")
-     
-      let valor0 = inputes[0].value
-      if(valor0 == "") {valor0 = 0}
-      valor0 = parseInt(valor0)      
-
-      let valor1 = inputes[1].value
-      if(valor1 == "") {valor1 = 0}
-      valor1 = parseInt(valor1)
-
-      let valor2 = inputes[2].value
-      if(valor2 == "") {valor2 = 0}
-      valor2 = parseInt(valor2)
-
-      let valor3 = inputes[3].value
-      if(valor3 == "") {valor3 = 0}
-      valor3 = parseInt(valor3)
-    
-      let valor4 = inputes[4].value
-      if(valor4 == "") {valor4 = 0}
-      valor4 = parseInt(valor4)
-
-      if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
-        alert('insira uma nota válida!')
-      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
-        alert('insira uma nota válida!')
-      }else{
-        mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
-        setValue(10, Math.round(mediaTudo))
-
-        let salvarBD = new areasVidas(10, Math.round(mediaTudo))
-        let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("equiEmo", salvando)
-
-        $("#titleQ").text('Desenvolvimento Intelectual')
-        $("#quiz11").remove()
-        $("#quiz12").show()  
-      }   
-    })
-
-    // ******************************************* AREA VIDA Equilíbrio Emocional *******************************************
-    $("#btn12").click(()=>{
-      let inputes = document.querySelectorAll("input.desenvIntelect")
-      
-      let valor0 = inputes[0].value
-      if(valor0 == "") {valor0 = 0}
-      valor0 = parseInt(valor0)      
-
-      let valor1 = inputes[1].value
-      if(valor1 == "") {valor1 = 0}
-      valor1 = parseInt(valor1)
-
-      let valor2 = inputes[2].value
-      if(valor2 == "") {valor2 = 0}
-      valor2 = parseInt(valor2)
-
-      let valor3 = inputes[3].value
-      if(valor3 == "") {valor3 = 0}
-      valor3 = parseInt(valor3)
-    
-      let valor4 = inputes[4].value
-      if(valor4 == "") {valor4 = 0}
-      valor4 = parseInt(valor4)
-
-      if(valor0 < 0 || valor1 < 0 || valor2 < 0 || valor3 < 0 || valor4 < 0){
-        alert('insira uma nota válida!')
-      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10 || valor3 > 10 || valor4 > 10){
-        alert('insira uma nota válida!')
-      }else{
-        mediaTudo = (valor0 + valor1 + valor2 + valor3 + valor4) / 5
-        setValue(11, Math.round(mediaTudo))
-        
-        let salvarBD = new areasVidas(11, Math.round(mediaTudo))
-        let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("desenvIntelect", salvando)
-
-        $("#titleQ").text('Resultado').addClass("mt-5")
-        $("#quiz12, #infoDaNota").remove()
-        $("#resultado").show()
-      }          
-    })
+    })    
    
     $("button.btn-info").click(()=>{
       window.scroll(0, 0)
