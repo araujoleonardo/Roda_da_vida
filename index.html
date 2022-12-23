@@ -16,7 +16,7 @@
 
     <style>
         body {
-            background-color: rgb(42, 131, 139);
+            background-color: rgb(150, 84, 255);
         }
 
         html {
@@ -46,17 +46,55 @@
         <div class="row mt-2 mb-5">
 
             <div class="col-12 bg-light p-4 animated slideInUp mt-5" id="elementoMain">
-                <h3 class="text-center mb-2">Teste - roda da vida</h3>
+                <h3 class="text-center mb-2">Roda da Vida</h3>
                 <center>
                     <img src="img/barra-roda-vida.png" class="img-fluid">
                 </center>
 
-                <h2 class="text-info mt-2" id="titleQ">Aprendizagem e Desenvolvimento <span><i class="fas fa-home"></i></span></h2>
+                <h2 class="text-info mt-2" id="titleQ">Home <span><i class="fas fa-home"></i></span></h2>
                 <hr>
-                <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
+                
+                <!-- ************************************ Home ************************************ -->
+                <div id="home" class="mt-5">
+                    <div class="col">
+                        <p class="lead">
+                            <b>
+                                Oiê!
+                                Essa é a Roda de Acolhimento Universitário - PUCPR! Uma ferramenta desenvolvida para te ajudar a 
+                                ter uma visão de como algumas áreas da sua vida acadêmica estão! Aqui nós vamos falar sobre saúde, 
+                                aprendizagem, direitos e inclusão! 
+                                Mas, como faço para usar essa ferramenta????
+                                É bem simples! São algumas afirmativas sobre 4 temáticas:
+                                <ol>
+                                    <li>Aprendizagem e Desenvolvimento</li>
+                                    <li>Saúde Integral</li>
+                                    <li>Inclusão e Diversidade Humana</li>
+                                    <li>Garantia de Direitos e Proteção Social</li>
+                                </ol>
+    
+                                Você vai avaliar cada item com uma nota, de 0 a 10, sendo 0 para quando você discordar 
+                                totalmente da afirmação e 10 para quando você concordar totalmente. 
+                                É muito importante que você seja sincero! Lembre-se que isso é um instrumento 
+                                de autoconhecimento que pode te ajudar ao longo da sua trajetória aqui na PUCPR!
+                                Ao final das afirmativas, você vai ter acesso à uma visão atual da sua roda 
+                                de acolhimento toda preenchida, além de algumas sugestões de 
+                                ações para você se aprofundar em cada uma das áreas!!
+                                O tempo estimado para preencher todo o instrumento é de 10 minutos
+                                Bora lá?
+    
+                            </b>
+                        </p>
+                    </div>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn0">
+                            Fazer o teste
+                        </button>
+                    </div>
+                </div>
 
                 <!-- ************************************ questão 1 ************************************ -->
                 <div id="quiz1" class="mt-3">
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <div class="row">
@@ -66,92 +104,95 @@
                                 <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;"
                                         style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
-                                        class="mt-2 form-control text-center areaAprendizagemDesenvolvimento text-center">
+                                        class="mt-2 form-control text-center aprendizagemDesenvolvimento text-center" required>
                                 </div>
                             </div>
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
-                                    <p class="mt-2">2. Reconheço minhas habilidades para desenvolver atividades em
-                                        grupo.</p>
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">2. Reconheço minhas habilidades para desenvolver atividades em grupo.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
-                                        class="mt-2 form-control text-center areaAprendizagemDesenvolvimento">
+                                        class="mt-2 form-control text-center aprendizagemDesenvolvimento">
                                 </div>
                             </div>
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">3. Consigo construir conhecimento com autonomia e aplicá-lo em situações concretas.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
-                                        class="mt-2 form-control text-center areaAprendizagemDesenvolvimento">
+                                        class="mt-2 form-control text-center aprendizagemDesenvolvimento">
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <button type="button" class="btn btn-info btn-block mt-4" id="btn1">
-                        Reponder
-                    </button>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn1">
+                            Reponder
+                        </button>
+                    </div>
                 </div>
 
                 <!-- ************************************ questão 2 ************************************ -->
                 <div id="quiz2" class="mt-3">
-
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">1. Tenho domínio dos conhecimentos básicos escolares para conseguir dar conta dos conteúdos da universidade.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
-                                        class="mt-2 form-control text-center areaNivelamento">
+                                        class="mt-2 form-control text-center nivelamento">
                                 </div>
                             </div>
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">2. Busco formas de apoio e recuperação diante das minhas dificuldades de aprendizagem básicas.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
-                                        class="mt-2 form-control text-center areaNivelamento">
+                                        class="mt-2 form-control text-center nivelamento">
                                 </div>
                             </div>
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">3. Identifico serviços de apoio dentro da PUCPR que me auxiliem nos conteúdos básicos das disciplinas.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
-                                        class="mt-2 form-control text-center areaNivelamento">
+                                        class="mt-2 form-control text-center nivelamento">
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <button type="button" class="btn btn-info btn-block mt-4" id="btn2">
-                        Reponder
-                    </button>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn2">
+                            Reponder
+                        </button>
+                    </div>
                 </div>
 
                 <!-- ************************************ questão 3 ************************************ -->
                 <div id="quiz3" class="mt-3">
-
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">1. Busco ambientes que favorecem meus estudos.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center estHabitoEstudo">
                                 </div>
@@ -159,10 +200,10 @@
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">2. Mantenho uma rotina constante de estudos.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center estHabitoEstudo">
                                 </div>
@@ -170,31 +211,33 @@
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">3. Aplico estratégias de estudos eficazes de acordo com minhas necessidades de aprendizagem.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center estHabitoEstudo">
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <button type="button" class="btn btn-info btn-block mt-4" id="btn3">
-                        Reponder
-                    </button>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn3">
+                            Reponder
+                        </button>
+                    </div>
                 </div>
 
                 <!-- ************************************ questão 4 ************************************ -->
                 <div id="quiz4" class="mt-3">
-
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">1. Tenho cuidado do corpo e da saúde.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center saudeFisica">
                                 </div>
@@ -202,10 +245,10 @@
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">2. Costumo procurar acompanhamento de saúde / Estou em dia com os meus check-ups e exames de saúde.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center saudeFisica">
                                 </div>
@@ -213,31 +256,33 @@
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">3. Mantenho hábitos saudáveis em minha rotina, como: sono, alimentação e atividades físicas.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center saudeFisica">
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <button type="button" class="btn btn-info btn-block mt-4" id="btn4">
-                        Reponder
-                    </button>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn4">
+                            Reponder
+                        </button>
+                    </div>
                 </div>
 
                 <!-- ************************************ questão 5 ************************************ -->
                 <div id="quiz5" class="mt-3">
-
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">1. Vivencio sentimentos positivos, tais como bom humor, contentamento, serenidade e ânimo.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center saudeMental">
                                 </div>
@@ -245,10 +290,10 @@
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">2. Consigo exercer e cumprir com as minhas obrigações diárias.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center saudeMental">
                                 </div>
@@ -256,31 +301,33 @@
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">3. Tenho pessoas ao meu entorno que me apoiam nas situações do dia a dia.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center saudeMental">
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <button type="button" class="btn btn-info btn-block mt-4" id="btn5">
-                        Reponder
-                    </button>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn5">
+                            Reponder
+                        </button>
+                    </div>
                 </div>
 
                 <!-- ************************************ questão 6 ************************************ -->
                 <div id="quiz6" class="mt-3">
-
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">1. Consigo me valorizar e confiar em mim.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center bemEstar">
                                 </div>
@@ -288,10 +335,10 @@
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">2. Aproveito meu tempo livre com atividades que me trazem qualidade de vida.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center bemEstar">
                                 </div>
@@ -299,22 +346,294 @@
                         </li>
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-lg-8  col-8">
+                                <div class="col-lg-8 col-8">
                                     <p class="mt-2">3. Sinto-me satisfeito com a rotina que levo nesse momento.</p>
                                 </div>
-                                <div class="col-lg-4  col-4">
+                                <div class="col-lg-4 col-4 text-center">
                                     <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
                                         class="mt-2 form-control text-center bemEstar">
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <button type="button" class="btn btn-info btn-block mt-4" id="btn6">
-                        Reponder
-                    </button>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn6">
+                            Reponder
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ************************************ questão 7 ************************************ -->
+                <div id="quiz7" class="mt-3">
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">1. Demonstro compromisso em relação a igualdade de direitos de todos.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center equidade">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">2. Manifesto o senso de justiça no ambiente acadêmico.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center equidade">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">3. Participo de eventos junto à instituição que discutem as diferenças de gênero/socioeconômica/racial.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center equidade">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn7">
+                            Reponder
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ************************************ questão 8 ************************************ -->
+                <div id="quiz8" class="mt-3">
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">1. Acolho as características e/ou diferenças identitárias (idade, gênero, étnico/racial, socioeconômico, deficiências/transtornos) dos meus colegas.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center integracao">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">2. Coopero para proporcionar a inclusão e respeito às diferenças nos grupos que participo.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center integracao">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">3. Sinto-me adaptado ao espaço universitário.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center integracao">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn8">
+                            Reponder
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ************************************ questão 9 ************************************ -->
+                <div id="quiz9" class="mt-3">
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">1. Transito nos espaços da universidade de maneira autônoma.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center acessibilidadeAutonomia">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">2. Consigo me comunicar de maneira efetiva dentro da comunidade acadêmica (professores, colegas, funcionários etc ).</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center acessibilidadeAutonomia">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">3. Participo da resolução de problemas diante de barreiras comunicacionais e estruturais percebidas no ambiente acadêmico.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center acessibilidadeAutonomia">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn9">
+                            Reponder
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ************************************ questão 10 ************************************ -->
+                <div id="quiz10" class="mt-3">
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">1. Nunca enfrentei ou presenciei situações de violência dentro do campus.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center protecaoIntegral">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">2. Sei identificar locais de apoio dentro da PUCPR para situações de violência (seja ela racial, sexual, social).</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center protecaoIntegral">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">3. Sinto segurança dentro da universidade, certo de que meus direitos serão garantidos.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center protecaoIntegral">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn10">
+                            Reponder
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ************************************ questão 11 ************************************ -->
+                <div id="quiz11" class="mt-3">
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">1. Conheço os projetos sociais e comunitários da PUCPR.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center responsabilidadeSocial">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">2. Participo de projetos sociais e comunitários da PUCPR.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center responsabilidadeSocial">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">3. Contribuo para promover um ambiente acadêmico seguro e saudável.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center responsabilidadeSocial">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn11">
+                            Reponder
+                        </button>
+                    </div>
                 </div>
 
                 <!-- ************************************ questão 12 ************************************ -->
+                <div id="quiz12" class="mt-3">
+                    <p class="lead" id="infoDaNota">(Dê uma nota de 0 à 10 para cada afirmação)</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">1. Procuro conhecer quais são meus direitos e deveres enquanto membro de uma comunidade acadêmica.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center cidadaniaConvivencia">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">2. Esforço-me para que os direitos das outras pessoas sejam garantidos.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center cidadaniaConvivencia">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-lg-8 col-8">
+                                    <p class="mt-2">3. Percebo que a universidade informa e promove os direitos e deveres de cada um.</p>
+                                </div>
+                                <div class="col-lg-4 col-4 text-center">
+                                    <input style="width: 66px; margin: auto auto;" type="number" max="10" min="0"
+                                        class="mt-2 form-control text-center cidadaniaConvivencia">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="d-flex flex-row-reverse">
+                        <button type="button" class="btn btn-info rounded-pill p-2 mt-4" id="btn12">
+                            Reponder
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ************************************ Resultado ************************************ -->
                 <div id="resultado" class="mt-5">
                     <p class="lead">
                         Agora, observe atentamente sua roda da vida abaixo e reflita.

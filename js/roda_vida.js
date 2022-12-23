@@ -14,6 +14,18 @@ $(document).ready(()=>{
       "country": "Saúde Mental"
     }, {
       "country": "Bem-Estar"
+    }, {
+      "country": "Equidade"
+    }, {
+      "country": "Integração"
+    }, {
+      "country": "Acessibilidade e Autonomia"
+    }, {
+      "country": "Proteção Integral"
+    }, {
+      "country": "Responsabilidade Social"
+    }, {
+      "country": "Cidadania e Convivência"
     } ],
     "valueAxes": [ {
       "gridType": "circles",
@@ -34,7 +46,7 @@ $(document).ready(()=>{
     } ],
     "graphs": [ {} ],
     "categoryField": "country"
-  } );
+  });
   
   /**
    * Sets value for particular index
@@ -85,7 +97,7 @@ $(document).ready(()=>{
   })
 
   function inserirDadosNaRoda(){
-    $("#quiz2, #quiz3, #quiz4, #quiz5, #quiz6, #resultado").hide()
+    $("#quiz1, #quiz2, #quiz3, #quiz4, #quiz5, #quiz6, #quiz7, #quiz8, #quiz9, #quiz10, #quiz11, #quiz12, #resultado").hide()
 
     class areasVidas {
       constructor(area, nota){
@@ -94,9 +106,18 @@ $(document).ready(()=>{
       }
     }
     
+    // ******************************************* AREA HOME *******************************************
+    $("#btn0").click(()=>{
+
+      $("#titleQ").html('Aprendizagem e Desenvolvimento > Habilidades e Competências')
+      $("#home").remove()
+      $("#quiz1").show()
+    })
+    
+
     // ******************************************* AREA APRENDIZAGEM E DESENVOLVIMENTO *******************************************
     $("#btn1").click(()=>{
-      let inputes = document.querySelectorAll("input.areaAprendizagemDesenvolvimento")
+      let inputes = document.querySelectorAll("input.aprendizagemDesenvolvimento")
 
       let valor0 = inputes[0].value
       if(valor0 == "") {valor0 = 0}
@@ -123,9 +144,9 @@ $(document).ready(()=>{
         // salvando no logalStorage
         let salvarBD = new areasVidas(0, Math.round(mediaTudo))
         let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("areaAprendizagemDesenvolvimento", salvando)
+        localStorage.setItem("aprendizagemDesenvolvimento", salvando)
 
-        $("#titleQ").html('Nivelamento')
+        $("#titleQ").html('Aprendizagem e Desenvolvimento > Nivelamento')
         $("#quiz1").remove()
         $("#quiz2").show()
       }
@@ -133,7 +154,7 @@ $(document).ready(()=>{
     
     // ******************************************* AREA NIVELAMENTO *******************************************
     $("#btn2").click(()=>{
-      let inputes = document.querySelectorAll("input.areaNivelamento")
+      let inputes = document.querySelectorAll("input.nivelamento")
       
 
       let valor0 = inputes[0].value
@@ -160,9 +181,9 @@ $(document).ready(()=>{
 
         let salvarBD = new areasVidas(1, Math.round(mediaTudo))
         let salvando = JSON.stringify(salvarBD)
-        localStorage.setItem("areaNivelamento", salvando)
+        localStorage.setItem("nivelamento", salvando)
 
-        $("#titleQ").html('Estratégias e Hábitos de Estudo <i class="fas fa-users"></i>')
+        $("#titleQ").html('Aprendizagem e Desenvolvimento > Estratégias e Hábitos de Estudo')
         $("#quiz2").remove()
         $("#quiz3").show() 
       }    
@@ -198,7 +219,7 @@ $(document).ready(()=>{
         let salvando = JSON.stringify(salvarBD)
         localStorage.setItem("estHabitoEstudo", salvando)
 
-        $("#titleQ").html('Saúde Física')
+        $("#titleQ").html('Saúde Integral > Saúde Física')
         $("#quiz3").remove()
         $("#quiz4").show()
       }
@@ -233,7 +254,7 @@ $(document).ready(()=>{
         let salvando = JSON.stringify(salvarBD)
         localStorage.setItem("saudeFisica", salvando)
 
-        $("#titleQ").text('Saúde Mental')
+        $("#titleQ").text('Saúde Integral > Saúde Mental')
         $("#quiz4").remove()
         $("#quiz5").show() 
       }    
@@ -267,7 +288,7 @@ $(document).ready(()=>{
         let salvando = JSON.stringify(salvarBD)
         localStorage.setItem("saudeMental", salvando)
 
-        $("#titleQ").text('Bem-Estar')
+        $("#titleQ").text('Saúde Integral > Bem-Estar')
         $("#quiz5").remove()
         $("#quiz6").show()
       }  
@@ -303,11 +324,227 @@ $(document).ready(()=>{
         let salvando = JSON.stringify(salvarBD)
         localStorage.setItem("bemEstar", salvando)
 
-        $("#titleQ").text('Resultado')
+        $("#titleQ").text('Inclusão e Diversidade Humana > Equidade')
         $("#quiz6").remove()
-        $("#resultado").show() 
+        $("#quiz7").show() 
         }    
-    })    
+    })
+    
+    // ******************************************* AREA EQUIDADE *******************************************
+    $("#btn7").click(()=>{
+      let inputes = document.querySelectorAll("input.equidade")
+      
+
+      let valor0 = inputes[0].value
+      if(valor0 == "") {valor0 = 0}
+      valor0 = parseInt(valor0)      
+
+      let valor1 = inputes[1].value
+      if(valor1 == "") {valor1 = 0}
+      valor1 = parseInt(valor1)
+
+      let valor2 = inputes[2].value
+      if(valor2 == "") {valor2 = 0}
+      valor2 = parseInt(valor2)
+
+      if(valor0 < 0 || valor1 < 0 || valor2 < 0){
+        alert('insira uma nota válida!')
+      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
+        alert('insira uma nota válida!')
+      }
+      else{
+        mediaTudo = (valor0 + valor1 + valor2) / 3
+        setValue(6, Math.round(mediaTudo))
+
+        let salvarBD = new areasVidas(6, Math.round(mediaTudo))
+        let salvando = JSON.stringify(salvarBD)
+        localStorage.setItem("equidade", salvando)
+
+        $("#titleQ").text('Inclusão e Diversidade Humana > Integração')
+        $("#quiz7").remove()
+        $("#quiz8").show() 
+        }    
+    })
+
+    // ******************************************* AREA INTEGRAÇÃO *******************************************
+    $("#btn8").click(()=>{
+      let inputes = document.querySelectorAll("input.integracao")
+      
+
+      let valor0 = inputes[0].value
+      if(valor0 == "") {valor0 = 0}
+      valor0 = parseInt(valor0)      
+
+      let valor1 = inputes[1].value
+      if(valor1 == "") {valor1 = 0}
+      valor1 = parseInt(valor1)
+
+      let valor2 = inputes[2].value
+      if(valor2 == "") {valor2 = 0}
+      valor2 = parseInt(valor2)
+
+      if(valor0 < 0 || valor1 < 0 || valor2 < 0){
+        alert('insira uma nota válida!')
+      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
+        alert('insira uma nota válida!')
+      }
+      else{
+        mediaTudo = (valor0 + valor1 + valor2) / 3
+        setValue(7, Math.round(mediaTudo))
+
+        let salvarBD = new areasVidas(7, Math.round(mediaTudo))
+        let salvando = JSON.stringify(salvarBD)
+        localStorage.setItem("integracao", salvando)
+
+        $("#titleQ").text('Inclusão e Diversidade Humana > Acessibilidade e Autonomia')
+        $("#quiz8").remove()
+        $("#quiz9").show() 
+        }    
+    })
+
+    // ******************************************* AREA ACESSIBILIDADE E AUTONOMIA *******************************************
+    $("#btn9").click(()=>{
+      let inputes = document.querySelectorAll("input.acessibilidadeAutonomia")
+      
+
+      let valor0 = inputes[0].value
+      if(valor0 == "") {valor0 = 0}
+      valor0 = parseInt(valor0)      
+
+      let valor1 = inputes[1].value
+      if(valor1 == "") {valor1 = 0}
+      valor1 = parseInt(valor1)
+
+      let valor2 = inputes[2].value
+      if(valor2 == "") {valor2 = 0}
+      valor2 = parseInt(valor2)
+
+      if(valor0 < 0 || valor1 < 0 || valor2 < 0){
+        alert('insira uma nota válida!')
+      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
+        alert('insira uma nota válida!')
+      }
+      else{
+        mediaTudo = (valor0 + valor1 + valor2) / 3
+        setValue(8, Math.round(mediaTudo))
+
+        let salvarBD = new areasVidas(8, Math.round(mediaTudo))
+        let salvando = JSON.stringify(salvarBD)
+        localStorage.setItem("acessibilidadeAutonomia", salvando)
+
+        $("#titleQ").text('Garantia de Direitos e Proteção Integral > Proteção Integral')
+        $("#quiz9").remove()
+        $("#quiz10").show() 
+        }    
+    })
+
+    // ******************************************* AREA PROTEÇÃO INTEGRAL *******************************************
+    $("#btn10").click(()=>{
+      let inputes = document.querySelectorAll("input.protecaoIntegral")
+      
+
+      let valor0 = inputes[0].value
+      if(valor0 == "") {valor0 = 0}
+      valor0 = parseInt(valor0)      
+
+      let valor1 = inputes[1].value
+      if(valor1 == "") {valor1 = 0}
+      valor1 = parseInt(valor1)
+
+      let valor2 = inputes[2].value
+      if(valor2 == "") {valor2 = 0}
+      valor2 = parseInt(valor2)
+
+      if(valor0 < 0 || valor1 < 0 || valor2 < 0){
+        alert('insira uma nota válida!')
+      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
+        alert('insira uma nota válida!')
+      }
+      else{
+        mediaTudo = (valor0 + valor1 + valor2) / 3
+        setValue(9, Math.round(mediaTudo))
+
+        let salvarBD = new areasVidas(9, Math.round(mediaTudo))
+        let salvando = JSON.stringify(salvarBD)
+        localStorage.setItem("protecaoIntegral", salvando)
+
+        $("#titleQ").text('Garantia de Direitos e Proteção Integral > Responsabilidade Social')
+        $("#quiz10").remove()
+        $("#quiz11").show() 
+        }    
+    })
+
+    // ******************************************* AREA RESPONSABILIDADE SOCIAL *******************************************
+    $("#btn11").click(()=>{
+      let inputes = document.querySelectorAll("input.responsabilidadeSocial")
+      
+
+      let valor0 = inputes[0].value
+      if(valor0 == "") {valor0 = 0}
+      valor0 = parseInt(valor0)      
+
+      let valor1 = inputes[1].value
+      if(valor1 == "") {valor1 = 0}
+      valor1 = parseInt(valor1)
+
+      let valor2 = inputes[2].value
+      if(valor2 == "") {valor2 = 0}
+      valor2 = parseInt(valor2)
+
+      if(valor0 < 0 || valor1 < 0 || valor2 < 0){
+        alert('insira uma nota válida!')
+      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
+        alert('insira uma nota válida!')
+      }
+      else{
+        mediaTudo = (valor0 + valor1 + valor2) / 3
+        setValue(10, Math.round(mediaTudo))
+
+        let salvarBD = new areasVidas(10, Math.round(mediaTudo))
+        let salvando = JSON.stringify(salvarBD)
+        localStorage.setItem("responsabilidadeSocial", salvando)
+
+        $("#titleQ").text('Garantia de Direitos e Proteção Integral > Cidadania e Convivência')
+        $("#quiz11").remove()
+        $("#quiz12").show() 
+        }    
+    })
+
+    // ******************************************* AREA CIDADANIA E CONVIVÊNCIA *******************************************
+    $("#btn12").click(()=>{
+      let inputes = document.querySelectorAll("input.cidadaniaConvivencia")
+      
+
+      let valor0 = inputes[0].value
+      if(valor0 == "") {valor0 = 0}
+      valor0 = parseInt(valor0)      
+
+      let valor1 = inputes[1].value
+      if(valor1 == "") {valor1 = 0}
+      valor1 = parseInt(valor1)
+
+      let valor2 = inputes[2].value
+      if(valor2 == "") {valor2 = 0}
+      valor2 = parseInt(valor2)
+
+      if(valor0 < 0 || valor1 < 0 || valor2 < 0){
+        alert('insira uma nota válida!')
+      }else  if(valor0 > 10 || valor1 > 10 || valor2 > 10){
+        alert('insira uma nota válida!')
+      }
+      else{
+        mediaTudo = (valor0 + valor1 + valor2) / 3
+        setValue(11, Math.round(mediaTudo))
+
+        let salvarBD = new areasVidas(11, Math.round(mediaTudo))
+        let salvando = JSON.stringify(salvarBD)
+        localStorage.setItem("cidadaniaConvivencia", salvando)
+
+        $("#titleQ").text('Resultado').addClass("mt-5")
+        $("#quiz12, #infoDaNota").remove()
+        $("#resultado").show()
+        }    
+    })
    
     $("button.btn-info").click(()=>{
       window.scroll(0, 0)

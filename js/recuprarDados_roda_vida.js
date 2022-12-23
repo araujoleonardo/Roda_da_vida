@@ -14,6 +14,18 @@ $(document).ready(()=>{
       "country": "Saúde Mental"
     }, {
       "country": "Bem-Estar"
+    }, {
+      "country": "Equidade"
+    }, {
+      "country": "Integração"
+    }, {
+      "country": "Acessibilidade e Autonomia"
+    }, {
+      "country": "Proteção Integral"
+    }, {
+      "country": "Responsabilidade Social"
+    }, {
+      "country": "Cidadania e Convivência"
     } ],
     "valueAxes": [ {
       "gridType": "circles",
@@ -87,20 +99,32 @@ $(document).ready(()=>{
   })
   
   function recuperarDados(){
-      let arFamilia = JSON.parse(localStorage.getItem('areaAprendizagemDesenvolvimento'))
-      let areaRelAmor = JSON.parse(localStorage.getItem('areaNivelamento'))
-      let vidSocial = JSON.parse(localStorage.getItem('estHabitoEstudo'))
-      let espiritualidade = JSON.parse(localStorage.getItem('saudeFisica'))
-      let hobbiesDiversao = JSON.parse(localStorage.getItem('saudeMental'))
-      let plenitudeFeliz = JSON.parse(localStorage.getItem('bemEstar'))
+      let aprDesenvolvimento = JSON.parse(localStorage.getItem('aprendizagemDesenvolvimento'))
+      let nivelamento = JSON.parse(localStorage.getItem('nivelamento'))
+      let estHabitoEstudo = JSON.parse(localStorage.getItem('estHabitoEstudo'))
+      let saudeFisica = JSON.parse(localStorage.getItem('saudeFisica'))
+      let saudeMental = JSON.parse(localStorage.getItem('saudeMental'))
+      let bemEstar = JSON.parse(localStorage.getItem('bemEstar'))
+      let equidade = JSON.parse(localStorage.getItem('equidade'))
+      let integracao = JSON.parse(localStorage.getItem('integracao'))
+      let acesAutonomia = JSON.parse(localStorage.getItem('acessibilidadeAutonomia'))
+      let protIntegral = JSON.parse(localStorage.getItem('protecaoIntegral'))
+      let respSocial = JSON.parse(localStorage.getItem('responsabilidadeSocial'))
+      let cidConvivencia = JSON.parse(localStorage.getItem('cidadaniaConvivencia'))
 
       let areasVidas = [
-          arFamilia, 
-          areaRelAmor, 
-          vidSocial, 
-          espiritualidade, 
-          hobbiesDiversao, 
-          plenitudeFeliz
+          aprDesenvolvimento, 
+          nivelamento, 
+          estHabitoEstudo, 
+          saudeFisica, 
+          saudeMental, 
+          bemEstar,
+          equidade, 
+          integracao, 
+          acesAutonomia,
+          protIntegral,
+          respSocial,
+          cidConvivencia
       ]
 
       areasVidas.forEach((x)=>{
