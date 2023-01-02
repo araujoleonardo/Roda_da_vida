@@ -97,7 +97,7 @@ $(document).ready(()=>{
   })
 
   function inserirDadosNaRoda(){
-    $("#quiz1, #quiz2, #quiz3, #quiz4, #quiz5, #resultado").hide()
+    $("#quiz1, #quiz2, #quiz3, #quiz4, #resultado").hide()
 
     class areasVidas {
       constructor(area, nota){
@@ -154,11 +154,11 @@ $(document).ready(()=>{
         let salvandoHE = JSON.stringify(salvarHE)
         localStorage.setItem("habilidadesEcompetencias", salvandoHE)
 
-        let salvarNL = new areasVidas(0, Math.round(mediaNL))
+        let salvarNL = new areasVidas(1, Math.round(mediaNL))
         let salvandoNL = JSON.stringify(salvarNL)
         localStorage.setItem("nivelamento", salvandoNL)
 
-        let salvarEHE = new areasVidas(0, Math.round(mediaEHE))
+        let salvarEHE = new areasVidas(2, Math.round(mediaEHE))
         let salvandoEHE = JSON.stringify(salvarEHE)
         localStorage.setItem("estHabitoEstudo", salvandoEHE)
 
@@ -204,15 +204,15 @@ $(document).ready(()=>{
         setValue(0, Math.round(mediaBE))
 
         // salvando no logalStorage
-        let salvarSF = new areasVidas(0, Math.round(mediaSF))
+        let salvarSF = new areasVidas(3, Math.round(mediaSF))
         let salvandoSF = JSON.stringify(salvarSF)
         localStorage.setItem("saudeFisica", salvandoSF)
 
-        let salvarSM = new areasVidas(0, Math.round(mediaSM))
+        let salvarSM = new areasVidas(4, Math.round(mediaSM))
         let salvandoSM = JSON.stringify(salvarSM)
         localStorage.setItem("saudeMental", salvandoSM)
 
-        let salvarBE = new areasVidas(0, Math.round(mediaBE))
+        let salvarBE = new areasVidas(5, Math.round(mediaBE))
         let salvandoBE = JSON.stringify(salvarBE)
         localStorage.setItem("bemEstar", salvandoBE)
 
@@ -258,15 +258,15 @@ $(document).ready(()=>{
         setValue(0, Math.round(mediaAA))
 
         // salvando no logalStorage
-        let salvarEQ = new areasVidas(0, Math.round(mediaEQ))
+        let salvarEQ = new areasVidas(6, Math.round(mediaEQ))
         let salvandoEQ = JSON.stringify(salvarEQ)
         localStorage.setItem("equidade", salvandoEQ)
 
-        let salvarIT = new areasVidas(0, Math.round(mediaIT))
+        let salvarIT = new areasVidas(7, Math.round(mediaIT))
         let salvandoIT = JSON.stringify(salvarIT)
         localStorage.setItem("integracao", salvandoIT)
 
-        let salvarAA = new areasVidas(0, Math.round(mediaAA))
+        let salvarAA = new areasVidas(8, Math.round(mediaAA))
         let salvandoAA = JSON.stringify(salvarAA)
         localStorage.setItem("acessibilidadeAutonomia", salvandoAA)
 
@@ -312,15 +312,15 @@ $(document).ready(()=>{
         setValue(0, Math.round(mediaCC))
 
         // salvando no logalStorage
-        let salvarPI = new areasVidas(0, Math.round(mediaPI))
+        let salvarPI = new areasVidas(9, Math.round(mediaPI))
         let salvandoPI = JSON.stringify(salvarPI)
         localStorage.setItem("protecaoIntegral", salvandoPI)
 
-        let salvarRS = new areasVidas(0, Math.round(mediaRS))
+        let salvarRS = new areasVidas(10, Math.round(mediaRS))
         let salvandoRS = JSON.stringify(salvarRS)
         localStorage.setItem("responsabilidadeSocial", salvandoRS)
 
-        let salvarCC = new areasVidas(0, Math.round(mediaCC))
+        let salvarCC = new areasVidas(11, Math.round(mediaCC))
         let salvandoCC = JSON.stringify(salvarCC)
         localStorage.setItem("cidadaniaConvivencia", salvandoCC)
 

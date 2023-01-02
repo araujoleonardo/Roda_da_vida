@@ -99,7 +99,7 @@ $(document).ready(()=>{
   })
   
   function recuperarDados(){
-      let habilidadesEcompetencias = JSON.parse(localStorage.getItem('habilidadesEcompetencias'))
+      let heCompetencias = JSON.parse(localStorage.getItem('habilidadesEcompetencias'))
       let nivelamento = JSON.parse(localStorage.getItem('nivelamento'))
       let estHabitoEstudo = JSON.parse(localStorage.getItem('estHabitoEstudo'))
       let saudeFisica = JSON.parse(localStorage.getItem('saudeFisica'))
@@ -113,7 +113,7 @@ $(document).ready(()=>{
       let cidConvivencia = JSON.parse(localStorage.getItem('cidadaniaConvivencia'))
 
       let areasVidas = [
-          habilidadesEcompetencias,
+          heCompetencias,
           nivelamento,
           estHabitoEstudo,
           saudeFisica,
