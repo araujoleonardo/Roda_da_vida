@@ -24,9 +24,10 @@
     <script src="https://kit.fontawesome.com/f8f0b10b6b.js" crossorigin="anonymous"></script>
 
     <!-- ANCHARTS JS -->
-    <script src="assets/js/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/radar.js"></script>
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
 </head>
 <body>
@@ -2722,16 +2723,15 @@
                     <p class="lead">
                         Agora, observe atentamente sua roda da vida abaixo e reflita.
                     </p>
-                    <p class="lead">
-                        <b>
-                            Em qual destas áreas, você poderia colocar um pouco mais de foco e energia para impactar
-                            positivamente um maior
-                            número de outras áreas em sua vida?
-                        </b>
-                    </p>
-                    <div id="chartdiv"></div>
+
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div id="chartdiv"></div>
+                    </div>
+                    
+
+
                     <center>
-                        <button class="btn btn-dark btn-lg" onclick="location.reload()">
+                        <button class="button btn-info" onclick="location.reload()">
                             Restart
                         </button>
                     </center>
