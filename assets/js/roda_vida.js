@@ -47,7 +47,7 @@ $(document).ready(()=>{
         mediaNL = (ad_4 + ad_5 + ad_6) / 3
         console.log(mediaNL)
 
-        mediaEHE = (ad_4 + ad_5 + ad_6) / 3
+        mediaEHE = (ad_7 + ad_8 + ad_8) / 3
         console.log(mediaEHE)
 
         // salvando no logalStorage
@@ -98,7 +98,7 @@ $(document).ready(()=>{
         mediaSM = (si_4 + si_5 + si_6) / 3
         console.log(mediaSM)
 
-        mediaBE = (si_4 + si_5 + si_6) / 3
+        mediaBE = (si_7 + si_8 + si_9) / 3
         console.log(mediaBE)
 
         // salvando no logalStorage
@@ -149,7 +149,7 @@ $(document).ready(()=>{
         mediaIT = (dh_4 + dh_5 + dh_6) / 3
         console.log(mediaIT)
 
-        mediaAA = (dh_4 + dh_5 + dh_6) / 3
+        mediaAA = (dh_7 + dh_8 + dh_9) / 3
         console.log(mediaAA)
 
         // salvando no logalStorage
@@ -200,7 +200,7 @@ $(document).ready(()=>{
         mediaRS = (gd_4 + gd_5 + gd_6) / 3
         console.log(mediaRS)
 
-        mediaCC = (gd_4 + gd_5 + gd_6) / 3
+        mediaCC = (gd_7 + gd_8 + gd_9) / 3
         console.log(mediaCC)
 
         // salvando no logalStorage
@@ -318,73 +318,73 @@ $(document).ready(()=>{
 
     var data = [{
         category: "teste1",
-        value: hc,
+        value: sf,
         columnSettings: {
             fill: am5.color("rgba(107, 89, 162, 0.5)")
         }
     }, {
         category: "teste2",
-        value: nv,
+        value: sm,
         columnSettings: {
             fill: am5.color("rgb(242, 151, 178)")
         }
     }, {
         category: "teste3",
-        value: ee,
+        value: be,
         columnSettings: {
             fill: am5.color("rgb(139, 20, 59)")
         }
     }, {
         category: "teste4",
-        value: sf,
+        value: eq,
         columnSettings: {
             fill: am5.color("rgb(230, 33, 71)")
         }
     }, {
         category: "teste5",
-        value: sm,
+        value: it,
         columnSettings: {
             fill: am5.color("rgb(107, 89, 162)")
         }
     }, {
         category: "teste6",
-        value: be,
+        value: aa,
         columnSettings: {
             fill: am5.color("rgb(242, 151, 178)")
         }
     }, {
         category: "teste7",
-        value: eq,
+        value: cc,
         columnSettings: {
             fill: am5.color("rgb(139, 20, 59)")
         }
     },{
         category: "teste8",
-        value: it,
+        value: rs,
         columnSettings: {
             fill: am5.color("rgb(230, 33, 71)")
         }
     }, {
         category: "teste9",
-        value: aa,
+        value: pi,
         columnSettings: {
             fill: am5.color("rgb(107, 89, 162)")
         }
     }, {
         category: "teste10",
-        value: pi,
+        value: ee,
         columnSettings: {
             fill: am5.color("rgb(242, 151, 178)")
         }
     }, {
         category: "teste11",
-        value: rs,
+        value: nv,
         columnSettings: {
             fill: am5.color("rgb(139, 20, 59)")
         }
     }, {
         category: "teste12",
-        value: cc,
+        value: hc,
         columnSettings: {
             fill: am5.color("rgb(230, 33, 71)")
         }
