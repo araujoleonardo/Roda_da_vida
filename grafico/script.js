@@ -4,11 +4,6 @@ am5.ready(function () {
   // https://www.amcharts.com/docs/v5/getting-started/#Root_element
   var root = am5.Root.new("chartdiv");
 
-  // Set themes
-  // https://www.amcharts.com/docs/v5/concepts/themes/
-  // root.setThemes([
-  //     am5themes_Animated.new(root)
-  // ]);
 
   // Create chart
   // https://www.amcharts.com/docs/v5/charts/radar-chart/
@@ -42,7 +37,7 @@ am5.ready(function () {
   }));
 
   // Deixar os valores invisiveis
-  // yAxis.get("renderer").labels.template.set("forceHidden", true);
+  yAxis.get("renderer").labels.template.set("forceHidden", true);
 
   // Create series
   // https://www.amcharts.com/docs/v5/charts/radar-chart/#Adding_series
@@ -66,71 +61,71 @@ am5.ready(function () {
       category: "teste",
       value: 5,
       columnSettings: {
-          fill: am5.color("rgba(107, 89, 162, 0.5)")
+        fill: am5.color("rgba(107, 89, 162, 0.5)")
       }
   }, {
       category: "teste2",
-      value: 6,
+      value: 8,
       columnSettings: {
           fill: am5.color("rgb(242, 151, 178)")
       }
   }, {
       category: "teste3",
-      value: 8,
+      value: 7,
       columnSettings: {
           fill: am5.color("rgb(139, 20, 59)")
       }
   }, {
       category: "teste4",
-      value: 7,
+      value: 4,
       columnSettings: {
           fill: am5.color("rgb(230, 33, 71)")
       }
   }, {
       category: "teste5",
-      value: 8,
+      value: 9,
       columnSettings: {
           fill: am5.color("rgb(107, 89, 162)")
       }
   }, {
       category: "teste6",
-      value: 5,
+      value: 10,
       columnSettings: {
           fill: am5.color("rgb(242, 151, 178)")
       }
   }, {
       category: "teste7",
-      value: 4,
+      value: 3,
       columnSettings: {
           fill: am5.color("rgb(139, 20, 59)")
       }
   },{
       category: "teste8",
-      value: 8,
+      value: 10,
       columnSettings: {
           fill: am5.color("rgb(230, 33, 71)")
       }
   }, {
       category: "teste9",
-      value: 10,
+      value: 5,
       columnSettings: {
           fill: am5.color("rgb(107, 89, 162)")
       }
   }, {
       category: "teste10",
-      value: 5,
+      value: 10,
       columnSettings: {
           fill: am5.color("rgb(242, 151, 178)")
       }
   }, {
-      category: "teste12",
-      value: 7,
+      category: "teste11",
+      value: 8,
       columnSettings: {
           fill: am5.color("rgb(139, 20, 59)")
       }
   }, {
       category: "teste13",
-      value: 8,
+      value: 6,
       columnSettings: {
           fill: am5.color("rgb(230, 33, 71)")
       }
