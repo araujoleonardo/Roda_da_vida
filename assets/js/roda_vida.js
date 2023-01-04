@@ -267,7 +267,7 @@ $(document).ready(()=>{
     }));
 
     // Deixar os valores invisiveis
-    // yAxis.get("renderer").labels.template.set("forceHidden", true);
+    yAxis.get("renderer").labels.template.set("forceHidden", true);
 
     // Create series
     // https://www.amcharts.com/docs/v5/charts/radar-chart/#Adding_series

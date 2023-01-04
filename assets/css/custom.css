@@ -1,4 +1,106 @@
 #chartdiv {
-  width: 50%;
-  height: 900px;
+  width: 75%;
+  height: 75%;
+}
+
+.first-child {
+  width: 800px;
+  height: 800px;
+  position: relative;
+  float: left;
+}
+
+.last-child {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  float: left;
+}
+
+img {
+  width: 98%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+}
+
+@media (max-width: 1199px) {
+  #chartdiv {
+    width: 77%;
+    height: 77%;
+  }
+
+  .first-child {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    float: left;
+  }
+
+  .last-child {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    float: left;
+  }
+
+  img {
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  #chartdiv {
+    width: 78%;
+    height: 78%;
+  }
+
+  .first-child {
+    width: 550px;
+    height: 550px;
+    position: relative;
+    float: left;
+  }
+
+  .last-child {
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    float: left;
+  }
+
+  img {
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+  }
+}
+
+@media (max-width: 575px) {
+  #chartdiv {
+    width: 80%;
+    height: 80%;
+  }
+
+  .first-child {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    float: left;
+  }
+
+  .last-child {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    float: left;
+  }
+
+  img {
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+  }
 }
