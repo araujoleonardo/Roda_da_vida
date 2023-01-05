@@ -260,7 +260,7 @@ $(document).ready(()=>{
 
     var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
         min: 0,
-        max: 10,
+        max: 11,
         renderer: am5radar.AxisRendererRadial.new(root, {
             minGridDistance: 20
         })
@@ -302,18 +302,18 @@ $(document).ready(()=>{
       let respSocial = JSON.parse(localStorage.getItem('responsabilidadeSocial'))
       let cidConvivencia = JSON.parse(localStorage.getItem('cidadaniaConvivencia'))
 
-      if(heCompetencias){var hc = (heCompetencias.nota);}
-      if(nivelamento){var nv = (nivelamento.nota);}
-      if(estHabitoEstudo){var ee = (estHabitoEstudo.nota);}
-      if(saudeFisica){var sf = (saudeFisica.nota);}
-      if(saudeMental){var sm = (saudeMental.nota);}
-      if(bemEstar){var be = (bemEstar.nota);}
-      if(equidade){var eq = (equidade.nota);}
-      if(integracao){var it = (integracao.nota);}
-      if(acesAutonomia){var aa = (acesAutonomia.nota);}
-      if(protIntegral){var pi = (protIntegral.nota);}
-      if(respSocial){var rs = (respSocial.nota);}
-      if(cidConvivencia){var cc = (cidConvivencia.nota);}
+      if(heCompetencias){var hc = (heCompetencias.nota) + 1;}
+      if(nivelamento){var nv = (nivelamento.nota) + 1;}
+      if(estHabitoEstudo){var ee = (estHabitoEstudo.nota) + 1;}
+      if(saudeFisica){var sf = (saudeFisica.nota) + 1;}
+      if(saudeMental){var sm = (saudeMental.nota) + 1;}
+      if(bemEstar){var be = (bemEstar.nota) + 1;}
+      if(equidade){var eq = (equidade.nota) + 1;}
+      if(integracao){var it = (integracao.nota) + 1;}
+      if(acesAutonomia){var aa = (acesAutonomia.nota) + 1;}
+      if(protIntegral){var pi = (protIntegral.nota) + 1;}
+      if(respSocial){var rs = (respSocial.nota) + 1;}
+      if(cidConvivencia){var cc = (cidConvivencia.nota) + 1;}
 
 
     var data = [{
