@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Roda da vida</title>
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link href="assets/css/style-grafico.css" rel="stylesheet">
+
+    <!-- CDN BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <!-- ANCHARTS JS -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+</head>
+<body>
+
+    <main id="RODAVIDA">
+
+        <div class="slideInUp" id="elementoMain">
+            <!-- ======= Header Section ======= -->
+            <section id="header" class="header">
+                <div class="container-fluid">
+
+                    <div class="row d-flex align-items-center justify-content-between" data-aos="zoom-in">
+
+                        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                            <img src="assets/img/logo-puc.svg" class="img-header" alt="">
+                        </div>
+
+                        <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                            <img src="assets/img/logo puc-pr.svg" class="img-header" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+            </section><!-- End Header Section -->
+
+            <!-- ************************************ Resultado ************************************ -->
+            <div id="resultado" class="">                
+
+                <!-- ======= Services Section ======= -->
+                <section id="services" class="services section-bg">
+                    <div class="container-fluid" data-aos="fade-up">
+
+                        <div class="section-title">
+                            <h2>RODA DE ACOLHIMENTO UNIVERSITÁRIO</h2>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="icon-box">
+                                    <h4>Aprendizagem e Desenvolvimento</h4>
+                                    <p>
+                                        Aprendizagem e desenvolvimento são temas centrais na vida do estudante que vão além da sala de aula e dos momentos de estudo. 
+                                        Aqui, falamos desde vínculo com o ambiente acadêmico, colegas e professores até  habilidades e competências acadêmicas.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+                                data-aos-delay="200">
+                                <div class="icon-box">
+                                    <h4>Saúde Integral</h4>
+                                    <p>
+                                        Entendemos a saúde integral como o cuidado do nosso corpo e mente que envolve bem-estar, autocuidado, 
+                                        hábitos adequados, estudar, produzir e se relacionar de forma saudável. 
+                                        Estar bem está diretamente conectado com aprender bem, e vice-versa.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+                                data-aos-delay="300">
+                                <div class="icon-box">
+                                    <h4>Inclusão e Diversidade</h4>
+                                    <p>
+                                        Inclusão e diversidade fazem parte da nossa vida, e são príncipios essenciais em nossa universidade. 
+                                        Construir um ambiente inclusivo é respeitar e acolher as diferenças étnico-raciais, de gênero, socioeconômicas, 
+                                        geracionais, culturais, religiosas e caraterísticas identitárias. 
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+                                data-aos-delay="400">
+                                <div class="icon-box">
+                                    <h4>Garantia de Direitos e Proteção Social</h4>
+                                    <p>
+                                        Viver em sociedade traz consigo direitos e deveres, que devem ser respeitados em todos os ambientes. 
+                                        Na universidade não é diferente! Entendemos a PUCPR como espaço de proteção e 
+                                        promoção desses direitos e deveres e você é parte primordial nessa tarefa! 
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section><!-- End Services Section -->
+
+                <!-- ================================== RESULTADOS ========================================= -->
+                <div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            
+                            <!-- =================================== GRÁFICO ========================================= -->
+                            <div class="col-md-12">
+                                <div class="section-title mt-3">
+                                    <h2>SEUS RESULTADOS</h2>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-center first-child">
+                                            <div id="chartdiv"></div>
+                                        </div>
+                                
+                                        <div class="d-flex align-items-center justify-content-center last-child">
+                                            <img src="assets/img/grafico.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ======= RESULTADOS ======= -->
+                            <div class="col-md-12">
+                                <div id="team" class="team">
+                                    <div class="container-fluid" data-aos="fade-up">                                   
+                                        <div class="row">
+
+                                            <div class="col-lg-6 p-2">
+                                                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                                                    <div>
+                                                        <h4>Aprendizagem e Desenvolvimento</h4>
+                                                        <hr>
+                                                        <h5>
+                                                            O seu resultado indica que faltam elementos importantes para seu desenvolvimento e aprendizagem. 
+                                                            Importante estar atento e buscar formas de apoio que podem impulsionar suas  habilidades básicas e estratégias de estudo. 
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 p-2">
+                                                <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                                                    <div>
+                                                        <h4>Saúde Integral</h4>
+                                                        <hr>
+                                                        <h5>
+                                                            Esteja atento as questões que foram pouco expressivas em suas respostas. De acordo com seu resultado, 
+                                                            neste momento, é importante procurar ajuda de especialistas e manter uma rotina de cuidados. 
+                                                            Lembre-se que sua saúde integral pode impactar diretamente no seu dia-a-dia acadêmico. 
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 p-2">
+                                                <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                                                    <div>
+                                                        <h4>Inclusão e Diversidade</h4>
+                                                        <hr>
+                                                        <h5>
+                                                            Suas respostas indicam que você pode melhorar diante desses temas. Equidade, integração, 
+                                                            acessibilidade e autonomia são temáticas que merecem nossa atenção! 
+                                                            Comece percebendo os obstáculos que estão impedindo a sua participação e busque ajuda da instituição. 
+                                                            Você também pode estar mais atento aos seus colegas, ser cooperativo diante de situações de exclusão e promover formas de convivência inclusivas.
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 p-2">
+                                                <div class="member" data-aos="zoom-in" data-aos-delay="400">
+                                                    <div>
+                                                        <h4>Garantia de Direitos e Proteção Social</h4>
+                                                        <hr>
+                                                        <h5>
+                                                            Sua pontuação está baixa neste quesito, porém podemos melhorar! 
+                                                            É essencial  aprendermos sobre temáticas que garantem nossos direitos e regulam a vida em sociedade. 
+                                                            Importante que você se informe sobre locais e formas de apoio ou conscientização que podem ajudar em situações de vulnerabilidade ou violência. 
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- End Section -->
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- =================================== Botão Refazer ========================================= -->
+                <div>
+                    <div class="d-flex justify-content-end align-items-end m-3">
+                        <button class="button btn-info" id="refazer"">
+                            Refazer!?
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ======= Services Section ======= -->
+                <section id="services" class="services section-bg">
+                    <div class="container-fluid" data-aos="fade-up">
+
+                        <div class="section-title">
+                            <h2>DICAS E SUGESTÕES</h2>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="icon-box">
+                                    <ul>
+                                        <li>Reflita sobre sua forma de aprender;</li>
+                                        <li>Faça um planjamento da vida acadêmica;</li>
+                                        <li>Busque maneiras de estudar que façam sentido pra você;</li>
+                                        <li>Procure cursos de organização e hábitos de estudos;</li>
+                                        <li>Mantenha uma rotina de estudos;</li>
+                                        <li>Esteja atento(a) aos planos de ensino;</li>
+                                        <li>Ao identificar dificuldades de aprendizagem, busque apoio para superá-las;</li>
+                                        <li>Participe de atividades extracurriculares que você se identifica;</li>
+                                        <li>Busque criar vínculos com colegas e professores;</li>
+                                        <li>Respeite seu tempo e ritmo de aprendizagem.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+                                data-aos-delay="200">
+                                <div class="icon-box">
+                                    <ul>
+                                        <li>Observe seus comportamentos e sua rotina;</li>
+                                        <li>Mantenha hábitos saudáveis de alimentação, sono e práticas diárias de autocuidado ;</li>
+                                        <li>Identifique fatores de risco e busque ajuda de especialistas quando necessário ;</li>
+                                        <li>Reconheça e fortaleça seus fatores de proteção;</li>
+                                        <li>Tenha pessoas ao seu entorno que te apoiem ;</li>
+                                        <li>Compartilhe hábitos saúdaveis com seus colegas ;</li>
+                                        <li>Faça acompanhamentos de saúde regularmente;</li>
+                                        <li>Busque equilibrar as atividades acadêmicas e momentos de descanso e lazer;</li>
+                                        <li>Dedique tempo para estar com pessoas que gosta;</li>
+                                        <li>Promova momentos de “detox” das telas e redes sociais  ;</li>
+                                        <li>Busque ativamente auxílio e apoio.</li>
+                                    </ul>                                    
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+                                data-aos-delay="300">
+                                <div class="icon-box">
+                                    <ul>
+                                        <li>Participe de eventos e campanhas que discutem o tema;</li>
+                                        <li>Coopere para a integração de colegas nos grupos de trabalho;</li>
+                                        <li>Quando perceber barreiras à acessibilidade, indique melhorias a instituição;</li>
+                                        <li>Acolha todos os colegas, independentemente das suas  características e/ou diferenças;</li>
+                                        <li>Ao perceber alguma dificuldade do seu colega, pergunte se necessita de ajuda e qual é a melhor forma de ajudar ;</li>
+                                        <li>Pratique a escuta em diversos grupos sociais;</li>
+                                        <li>Quando não conseguir contato com alguém devido a sua condição, busque  maneiras respeitosas e acessíveis para se comunicar.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+                                data-aos-delay="400">
+                                <div class="icon-box">
+                                    <ul>
+                                        <li>Conheça órgãos especializados nas temáticas de proteção e garantia de direitos;</li>
+                                        <li>Busque se informar sobre setores da PUCPR que podem auxiliar em situações delicadas ;</li>
+                                        <li>Conheça os princípios e regras que regulam nossa Universidade;</li>
+                                        <li>Durante a jornada acadêmica, promova ações que te tornem, além de um bom profissioanal, um estudante com "diploma de gente boa";</li>
+                                        <li>Ao perceber uma situação de exclusão, vulnerabilidade ou violência, ofereça acolhimento e busque apoio da instituição;</li>
+                                        <li>Incentive e promova práticas que tornem o ambiente acadêmico saudável e seguro.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section><!-- End Services Section -->
+
+            </div>
+            <!-- =================================== Footer ========================================= -->
+            <footer id="footer">
+                <div class="container-fluid footer-bottom clearfix">
+                    <div id="team" class="team">
+                        <div class="container-fluid" data-aos="fade-up">
+                            <div class="section-title">
+                                <h4>Puc Acolhe</h4>
+                            </div>                                   
+                            <div class="row text-center">
+
+                                <div class="col-lg-3 p-2">
+                                    <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                                        <div>
+                                            <p><a href="">Monitorias</a></p>
+                                            <p><a href="">Grupos de estudo</a></p>
+                                            <p><a href="">Iniciação científica</a></p>
+                                            <p><a href="">Suporte dos professores e coordenação</a></p>
+                                            <p><a href="">Atividades e materiais de apoio no AVA</a></p>
+                                            <p><a href="">PUC Carreiras</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 p-2">
+                                    <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                                        <div>
+                                            <p><a href="">Ambulatório de Saúde PUCPR</a></p>
+                                            <p><a href="">Setor de Cultura e Esporte</a></p>
+                                            <p><a href="">Núcleo de Prática em Psicologia</a></p>
+                                            <p><a href="">Clínica de Nutrição</a></p>
+                                            <p><a href="">Clínica de Odontologia</a></p>
+                                            <p><a href="">Clínica de Fisioterapia</a></p>
+                                            <p><a href="">Rede externa de saúde</a></p> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 p-2">
+                                    <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                                        <div>
+                                            <p><a href="">Clubes Universitários</a></p>
+                                            <p><a href="">Suporte dos professores e colegas</a></p>  
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 p-2">
+                                    <div class="member" data-aos="zoom-in" data-aos-delay="400">
+                                        <div>
+                                            <p><a href="">Diretoria de Identidade Institucional</a></p>
+                                            <p><a href="">Projeto Comunitário</a></p>
+                                            <p><a href="">Projetos e ações de extensão</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <hr>
+                    <div class="copyright">
+                        <img src="assets/img/logo puc-pr.svg" class="img-header" alt="">
+                    </div>
+                    <div class="credits">
+                        <ul>
+                            <li>
+                                <a href="#" class="nav-link">OUVIDORIA</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link">TRABALHE NA PUC</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link">POLÍTICA DE PRIVACIDADE</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer><!-- End Footer -->
+        </div>
+    </main>
+
+    <!-- Vendor JS Files -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/roda_vida.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
