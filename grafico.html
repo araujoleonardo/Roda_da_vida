@@ -12,7 +12,6 @@
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
     <!-- CSS Files -->
-    <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link href="assets/css/style-grafico.css" rel="stylesheet">
 
@@ -35,7 +34,7 @@
 
         <div class="slideInUp" id="elementoMain">
             <!-- ======= Header Section ======= -->
-            <section id="header" class="header">
+            <section id="header" class="header d-flex align-items-center">
                 <div class="container-fluid">
 
                     <div class="row d-flex align-items-center justify-content-between" data-aos="zoom-in">
@@ -56,8 +55,8 @@
             <!-- ************************************ Resultado ************************************ -->
             <div id="resultado" class="">                
 
-                <!-- ======= Services Section ======= -->
-                <section id="services" class="services section-bg">
+                <!-- ======= Hero Section ======= -->
+                <section id="hero" class="hero section-bg">
                     <div class="container-fluid" data-aos="fade-up">
 
                         <div class="section-title">
@@ -114,7 +113,7 @@
                         </div>
 
                     </div>
-                </section><!-- End Services Section -->
+                </section><!-- End hero Section -->
 
                 <!-- ================================== RESULTADOS ========================================= -->
                 <div>
@@ -124,15 +123,15 @@
                             <!-- =================================== GRÁFICO ========================================= -->
                             <div class="col-md-12">
                                 <div class="section-title mt-3">
-                                    <h2>SEUS RESULTADOS</h2>
+                                    <h3 style="font-weight: bold; color: blueviolet;">SEUS RESULTADOS</h3>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-center">
                                     <div>
-                                        <div class="d-flex align-items-center justify-content-center first-child">
+                                        <div class="d-flex align-items-center justify-content-center first-child fade-in seven">
                                             <div id="chartdiv"></div>
                                         </div>
                                 
-                                        <div class="d-flex align-items-center justify-content-center last-child">
+                                        <div class="d-flex align-items-center justify-content-center last-child" data-aos="zoom-in" data-aos-delay="100">
                                             <img src="assets/img/grafico.svg" alt="">
                                         </div>
                                     </div>
@@ -141,7 +140,7 @@
 
                             <!-- ======= RESULTADOS ======= -->
                             <div class="col-md-12">
-                                <div id="team" class="team">
+                                <div id="result" class="result">
                                     <div class="container-fluid" data-aos="fade-up">                                   
                                         <div class="row">
 
@@ -150,10 +149,19 @@
                                                     <div>
                                                         <h4>Aprendizagem e Desenvolvimento</h4>
                                                         <hr>
-                                                        <h5>
+                                                        <p id="ad1">
                                                             O seu resultado indica que faltam elementos importantes para seu desenvolvimento e aprendizagem. 
                                                             Importante estar atento e buscar formas de apoio que podem impulsionar suas  habilidades básicas e estratégias de estudo. 
-                                                        </h5>
+                                                        </p>
+                                                        <p id="ad2">
+                                                            O seu resultado indica que suas estratégias de aprendizagem e de estudos estão satifatórias. 
+                                                            Ainda assim, você pode melhorar seu desenvolvimento acadêmico identificando estratégias que podem potencializar seu desempenho.
+                                                        </p>
+                                                        <p id="ad3">
+                                                            O seu resultado indica que você está no caminho correto! 
+                                                            Uma boa avaliação neste quesito indica que suas estrátergias estão refletindo na sua aprendizagem e desenvolvimento. 
+                                                            Inclusive, você pode compartilhar seus conhecimentos e auxiliar outros colegas nessa jornada!
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -163,11 +171,22 @@
                                                     <div>
                                                         <h4>Saúde Integral</h4>
                                                         <hr>
-                                                        <h5>
+                                                        <p id="si1">
                                                             Esteja atento as questões que foram pouco expressivas em suas respostas. De acordo com seu resultado, 
                                                             neste momento, é importante procurar ajuda de especialistas e manter uma rotina de cuidados. 
                                                             Lembre-se que sua saúde integral pode impactar diretamente no seu dia-a-dia acadêmico. 
-                                                        </h5>
+                                                        </p>
+                                                        <p id="si2">
+                                                            Seu resultado aponta que você pode fazer algumas mudanças para ter uma saúde integral ainda melhor. 
+                                                            Esteja atento aos seus faptores de risco e reconheça os fatores de proteção que podem ser seus aliados nessa trajetória. 
+                                                            Modificar comportamentos não é uma tarefa fácil, no entanto, o resultado virá e você sentirá positivamente as transformações.  
+                                                        </p>
+                                                        <p id="si3">
+                                                            Seu resultado aponta que você está atento aos cuidados consigo! 
+                                                            Seus comportamentos relacionados a saúde integral tem impacto positivo em sua vida pessoal. 
+                                                            Que tal ser um multiplicador e apoiar seus colegas? 
+                                                            Compartilhe seus hábitos saúdaveis e promova acolhimento das pessoas ao seu redor.
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -177,12 +196,21 @@
                                                     <div>
                                                         <h4>Inclusão e Diversidade</h4>
                                                         <hr>
-                                                        <h5>
+                                                        <p id="id1">
                                                             Suas respostas indicam que você pode melhorar diante desses temas. Equidade, integração, 
                                                             acessibilidade e autonomia são temáticas que merecem nossa atenção! 
                                                             Comece percebendo os obstáculos que estão impedindo a sua participação e busque ajuda da instituição. 
                                                             Você também pode estar mais atento aos seus colegas, ser cooperativo diante de situações de exclusão e promover formas de convivência inclusivas.
-                                                        </h5>
+                                                        </p>
+                                                        <p id="id2">
+                                                            Você parece sentir-se incluído nos ambientes que participa, assim como busca criar espaços inclusivos e acolhedores. Mas sempre temos o que melhorar, não é mesmo? 
+                                                            Esteja atento(a) aos obstáculos que ainda impedem a sua participação plena ou das pessoas ao seu redor, fortaleça sua integração e a inclusão de todos.
+                                                        </p>
+                                                        <p id="id3">
+                                                            Notamos que sua média está bem alta nesses temas e ficamos contentes! 
+                                                            Sabemos que a cooperação auxilia na propagação de posturas não excludentes. 
+                                                            Continue multiplicando seus conhecimentos e práticas, contribuindo com a inclusão de todos!
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -192,11 +220,19 @@
                                                     <div>
                                                         <h4>Garantia de Direitos e Proteção Social</h4>
                                                         <hr>
-                                                        <h5>
+                                                        <p id="gdp1">
                                                             Sua pontuação está baixa neste quesito, porém podemos melhorar! 
                                                             É essencial  aprendermos sobre temáticas que garantem nossos direitos e regulam a vida em sociedade. 
                                                             Importante que você se informe sobre locais e formas de apoio ou conscientização que podem ajudar em situações de vulnerabilidade ou violência. 
-                                                        </h5>
+                                                        </p>
+                                                        <p id="gdp2">
+                                                            Você mostrou conhecer algumas formas de garantias de direito e possibilidades de convivência saudável. 
+                                                            Entretanto, existe um universo de possibilidades que pode explorar para potencializar o exercício de seus direitos, deveres e cidadania.
+                                                        </p>
+                                                        <p id="gdp3">
+                                                            Ficamos felizes em saber que tem buscado conhecer seus direitos, conviver harmoniosamente com a comunidade 
+                                                            e saber onde buscar apoio em situações delicadas. Que tal espalhar seu conhecimento por aí?
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -217,12 +253,12 @@
                     </div>
                 </div>
 
-                <!-- ======= Services Section ======= -->
-                <section id="services" class="services section-bg">
+                <!-- ======= Dicas e Sugestões Section ======= -->
+                <section id="dicas" class="hero section-bg">
                     <div class="container-fluid" data-aos="fade-up">
 
                         <div class="section-title">
-                            <h2>DICAS E SUGESTÕES</h2>
+                            <h3 style="font-weight: bold; color: blueviolet;">DICAS E SUGESTÕES</h3>
                         </div>
 
                         <div class="row">
@@ -294,16 +330,16 @@
                         </div>
 
                     </div>
-                </section><!-- End Services Section -->
+                </section><!-- End hero Section -->
 
             </div>
             <!-- =================================== Footer ========================================= -->
             <footer id="footer">
                 <div class="container-fluid footer-bottom clearfix">
-                    <div id="team" class="team">
+                    <div id="result" class="result">
                         <div class="container-fluid" data-aos="fade-up">
                             <div class="section-title">
-                                <h4>Puc Acolhe</h4>
+                                <h4 style="font-weight: bold; color: blueviolet;">Puc Acolhe</h4>
                             </div>                                   
                             <div class="row text-center">
 

@@ -1,4 +1,6 @@
 $(document).ready(()=>{
+  $("#ad1, #ad2, #ad3, #si1, #si2, #si3, #id1, #id2, #id3, #gdp1, #gdp2, #gdp3").hide()
+
   recuperaDados()
 
   $("#refazer").click(() => {
@@ -80,93 +82,125 @@ $(document).ready(()=>{
         window.open('index.html', "_self")
     }
 
-    if(heCompetencias){var hc = (heCompetencias.nota) + 1;}
-    if(nivelamento){var nv = (nivelamento.nota) + 1;}
-    if(estHabitoEstudo){var ee = (estHabitoEstudo.nota) + 1;}
-    if(saudeFisica){var sf = (saudeFisica.nota) + 1;}
-    if(saudeMental){var sm = (saudeMental.nota) + 1;}
-    if(bemEstar){var be = (bemEstar.nota) + 1;}
-    if(equidade){var eq = (equidade.nota) + 1;}
-    if(integracao){var it = (integracao.nota) + 1;}
-    if(acesAutonomia){var aa = (acesAutonomia.nota) + 1;}
-    if(protIntegral){var pi = (protIntegral.nota) + 1;}
-    if(respSocial){var rs = (respSocial.nota) + 1;}
-    if(cidConvivencia){var cc = (cidConvivencia.nota) + 1;}
+    if(heCompetencias){var hc = (heCompetencias.nota);}
+    if(nivelamento){var nv = (nivelamento.nota);}
+    if(estHabitoEstudo){var ee = (estHabitoEstudo.nota);}
+    if(saudeFisica){var sf = (saudeFisica.nota);}
+    if(saudeMental){var sm = (saudeMental.nota);}
+    if(bemEstar){var be = (bemEstar.nota);}
+    if(equidade){var eq = (equidade.nota);}
+    if(integracao){var it = (integracao.nota);}
+    if(acesAutonomia){var aa = (acesAutonomia.nota);}
+    if(protIntegral){var pi = (protIntegral.nota);}
+    if(respSocial){var rs = (respSocial.nota);}
+    if(cidConvivencia){var cc = (cidConvivencia.nota);}
 
 
     var data = [{
         category: "teste1",
-        value: sf,
+        value: (sf + 1),
         columnSettings: {
             fill: am5.color("rgba(107, 89, 162, 0.5)")
         }
     }, {
         category: "teste2",
-        value: sm,
+        value: (sm + 1),
         columnSettings: {
             fill: am5.color("rgb(242, 151, 178)")
         }
     }, {
         category: "teste3",
-        value: be,
+        value: (be + 1),
         columnSettings: {
             fill: am5.color("rgb(139, 20, 59)")
         }
     }, {
         category: "teste4",
-        value: eq,
+        value: (eq + 1),
         columnSettings: {
             fill: am5.color("rgb(230, 33, 71)")
         }
     }, {
         category: "teste5",
-        value: it,
+        value: (it + 1),
         columnSettings: {
             fill: am5.color("rgb(107, 89, 162)")
         }
     }, {
         category: "teste6",
-        value: aa,
+        value: (aa + 1),
         columnSettings: {
             fill: am5.color("rgb(242, 151, 178)")
         }
     }, {
         category: "teste7",
-        value: cc,
+        value: (cc + 1),
         columnSettings: {
             fill: am5.color("rgb(139, 20, 59)")
         }
     },{
         category: "teste8",
-        value: rs,
+        value: (rs + 1),
         columnSettings: {
             fill: am5.color("rgb(230, 33, 71)")
         }
     }, {
         category: "teste9",
-        value: pi,
+        value: (pi + 1),
         columnSettings: {
             fill: am5.color("rgb(107, 89, 162)")
         }
     }, {
         category: "teste10",
-        value: ee,
+        value: (ee + 1),
         columnSettings: {
             fill: am5.color("rgb(242, 151, 178)")
         }
     }, {
         category: "teste11",
-        value: nv,
+        value: (nv + 1),
         columnSettings: {
             fill: am5.color("rgb(139, 20, 59)")
         }
     }, {
         category: "teste12",
-        value: hc,
+        value: (hc + 1),
         columnSettings: {
             fill: am5.color("rgb(230, 33, 71)")
         }
     }];
+
+    if((hc + nv + ee)/3 <= 3){
+        $("#ad1").show()
+    }if ((hc + nv + ee)/3 <= 7) {
+        $('#ad2').show()
+    } else {
+        $('#ad3').show()
+    }
+
+    if((eq + it + aa)/3 <= 3){
+        $("#id1").show()
+    }if ((eq + it + aa)/3 <= 7) {
+        $('#id2').show()
+    } else {
+        $('#id3').show()
+    }
+
+    if((cc + rs + pi)/3 <= 3){
+        $("#gdp1").show()
+    }if ((cc + rs + pi)/3 <= 7) {
+        $('#gdp2').show()
+    } else {
+        $('#gdp3').show()
+    }
+
+    if((sf + sm + be)/3 <= 3){
+        $("#si1").show()
+    }if ((sf + sm + be)/3 <= 7) {
+        $('#si2').show()
+    } else {
+        $('#si3').show()
+    }
 
     series.data.setAll(data);
     xAxis.data.setAll(data);

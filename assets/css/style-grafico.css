@@ -1,3 +1,11 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  color: #444444;
+}
+
 a {
   color: #47b2e4;
   text-decoration: none;
@@ -7,6 +15,71 @@ a:hover {
   color: #73c5eb;
   text-decoration: none;
 }
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+# header
+--------------------------------------------------------------*/
+.header {
+  height: 10em;
+  padding: 5px 0;
+}
+
+.img-header {
+  max-width: 170px;
+  transition: all 0.4s ease-in-out;
+  padding: 15px 0;
+}
+
+.img-header:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 1200px) {
+  .header {
+      height: 7em;
+      padding: 5px 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+      height: 6em;
+      padding: 3px 0;
+  }
+
+  .img-header {
+      width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-header {
+      max-width: 130px;
+  }
+
+  .header {
+      height: 8em;
+      padding: 10px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .header {
+      height: 5em;
+      padding: 3px 0;
+  }
+
+  .img-header {
+      max-width: 120px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -24,7 +97,7 @@ section {
   text-align: center;
 }
 
-.section-title h1, h2, h3, h4 {
+.section-title h1, h2, h3, h4, h5 {
   font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
@@ -35,55 +108,77 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Services
+# Hero
 --------------------------------------------------------------*/
-.services .icon-box {
+#hero {
+  background: linear-gradient(320deg, #520C25 18.09%, #793068 61.88%);
+}
+
+#hero .section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #fff;
+}
+
+#hero h4 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.hero .icon-box {
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
   background: #fff;
 }
 
-.services .icon-box .icon {
+.hero .icon-box .icon {
   margin-bottom: 10px;
 }
 
-.services .icon-box .icon i {
+.hero .icon-box .icon i {
   color: #47b2e4;
   font-size: 36px;
   transition: 0.3s;
 }
 
-.services .icon-box h4 {
+.hero .icon-box h4 {
   font-weight: 500;
   margin-bottom: 15px;
   font-size: 24px;
 }
 
-.services .icon-box h4 a {
+.hero .icon-box h4 a {
   color: #37517e;
   transition: ease-in-out 0.3s;
 }
 
-.services .icon-box p {
+.hero .icon-box p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.services .icon-box:hover {
+.hero .icon-box:hover {
   transform: translateY(-10px);
 }
 
-.services .icon-box:hover h4 a {
+.hero .icon-box:hover h4 a {
   color: #47b2e4;
 }
 
 
 /*--------------------------------------------------------------
-# Team
+# Result
 --------------------------------------------------------------*/
-.team .member {
+.result .member {
   position: relative;
   height: 100%;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -93,43 +188,44 @@ section {
   transition: 0.5s;
 }
 
-.team .member .pic {
+.result .member .pic {
   overflow: hidden;
   width: 180px;
   border-radius: 50%;
 }
 
-.team .member .pic img {
+.result .member .pic img {
   transition: ease-in-out 0.3s;
 }
 
-.team .member:hover {
+.result .member:hover {
   transform: translateY(-10px);
 }
 
-.team .member .member-info {
+.result .member .member-info {
   padding-left: 10px;
 }
 
-.team .member h4 {
+.result .member h4 {
   font-weight: 700;
   font-size: 20px;
   color: #E51F46;
 }
 
-.team .member p {
+.result .member p {
   margin: 10px 0 0 0;
-  font-size: 14px;
+  font-size: 110%;
+  color: black;
 }
 
-.team .member .social {
+.result .member .social {
   margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.team .member .social a {
+.result .member .social a {
   transition: ease-in-out 0.3s;
   display: flex;
   align-items: center;
@@ -140,20 +236,193 @@ section {
   background: #eff2f8;
 }
 
-.team .member .social a i {
+.result .member .social a i {
   color: #37517e;
   font-size: 16px;
   margin: 0 2px;
 }
 
-.team .member .social a:hover {
+.result .member .social a:hover {
   background: #47b2e4;
 }
 
-.team .member .social a:hover i {
+.result .member .social a:hover i {
   color: #fff;
 }
 
-.team .member .social a + a {
+.result .member .social a + a {
   margin-left: 8px;
+}
+
+.button {
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  font-size: 2.0em;
+  line-height: 25px;
+  border: 0;
+  border-radius: 10px;
+  padding: 20px;
+  background: linear-gradient(0deg, #9654FF 0%, #422D71 100%);
+}
+
+.button:hover, button:focus {
+  background: linear-gradient(0deg, #422D71 0%, #9654FF 100%);    
+}
+
+.button:focus {
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: 0px;
+}
+
+@media (max-width: 991px) {
+  .button {
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.3em;
+    line-height: 20px;
+    border: 0;
+    padding: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+#footer .footer-bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#footer .copyright {
+  float: left;
+}
+
+#footer .credits {
+  float: right;
+  font-size: 13px;
+}
+
+#footer .credits a {
+  transition: 0.3s;
+  color: #878f92;
+}
+
+#footer .credits li {
+  display: inline-block;
+  margin: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+@media (max-width: 991px) {
+  #footer .footer-bottom {
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+
+  #footer .copyright,
+  #footer .credits {
+      text-align: center;
+      float: none;
+  }
+
+  #footer .credits {
+      padding-top: 0px;
+  }
+
+  #footer .credits a{
+      font-size: 13px;
+  }
+
+  #footer .credits {
+      float: none;
+      font-size: 8px;
+  }  
+  
+  #footer div img {
+      width: 15%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #footer .footer-bottom {
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+
+  #footer .copyright,
+  #footer .credits {
+      text-align: center;
+      float: none;
+  }
+
+  #footer .credits {
+      padding-top: 0px;
+  }
+
+  #footer .credits a{
+      font-size: 13px;
+  }
+
+  #footer .credits {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #footer .credits li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+  }
+
+  #footer .credits ul {
+      margin: 0;
+      padding: 0;
+  }
+}
+
+
+
+
+
+/* Keyframes for the fade-in */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.seven {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
