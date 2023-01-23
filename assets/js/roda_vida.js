@@ -97,73 +97,73 @@ $(document).ready(()=>{
 
 
     var data = [{
-        category: "teste1",
+        category: "1",
         value: (sf + 1),
         columnSettings: {
             fill: am5.color("rgba(107, 89, 162, 0.5)")
         }
     }, {
-        category: "teste2",
+        category: "2",
         value: (sm + 1),
         columnSettings: {
             fill: am5.color("rgb(242, 151, 178)")
         }
     }, {
-        category: "teste3",
+        category: "3",
         value: (be + 1),
         columnSettings: {
             fill: am5.color("rgb(139, 20, 59)")
         }
     }, {
-        category: "teste4",
+        category: "4",
         value: (eq + 1),
         columnSettings: {
             fill: am5.color("rgb(230, 33, 71)")
         }
     }, {
-        category: "teste5",
+        category: "5",
         value: (it + 1),
         columnSettings: {
             fill: am5.color("rgb(107, 89, 162)")
         }
     }, {
-        category: "teste6",
+        category: "6",
         value: (aa + 1),
         columnSettings: {
             fill: am5.color("rgb(242, 151, 178)")
         }
     }, {
-        category: "teste7",
+        category: "7",
         value: (cc + 1),
         columnSettings: {
             fill: am5.color("rgb(139, 20, 59)")
         }
     },{
-        category: "teste8",
+        category: "8",
         value: (rs + 1),
         columnSettings: {
             fill: am5.color("rgb(230, 33, 71)")
         }
     }, {
-        category: "teste9",
+        category: "9",
         value: (pi + 1),
         columnSettings: {
             fill: am5.color("rgb(107, 89, 162)")
         }
     }, {
-        category: "teste10",
+        category: "10",
         value: (ee + 1),
         columnSettings: {
             fill: am5.color("rgb(242, 151, 178)")
         }
     }, {
-        category: "teste11",
+        category: "11",
         value: (nv + 1),
         columnSettings: {
             fill: am5.color("rgb(139, 20, 59)")
         }
     }, {
-        category: "teste12",
+        category: "12",
         value: (hc + 1),
         columnSettings: {
             fill: am5.color("rgb(230, 33, 71)")
