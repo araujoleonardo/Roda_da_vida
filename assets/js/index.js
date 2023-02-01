@@ -5,14 +5,26 @@ $(document).ready(() => {
         //$("#quiz1, #quiz2, #quiz3, #quiz4, #resultado").hide()
 
         class areasVidas {
-            constructor(area, nota) {
-                this.area = area
-                this.nota = nota
+            constructor(nota1) {
+                this.nota1 = nota1
+            }
+        }
+
+        class areasVidas1 {
+            constructor(nota2) {
+                this.nota2 = nota2
+            }
+        }
+
+        class areasVidas2 {
+            constructor(nota3) {
+                this.nota3 = nota3
             }
         }
 
         // ******************************************* AREA HOME *******************************************
         $("#btn0").click(() => {
+            console.log('teste de localstorage')
             window.open('quiz1.html', "_self")
         })
 
@@ -62,18 +74,19 @@ $(document).ready(() => {
                 console.log(mediaEHE)
 
                 // salvando no logalStorage
-                let salvarHE = new areasVidas(0, Math.round(mediaHE))
+                let salvarHE = new areasVidas(Math.round(mediaHE))
                 let salvandoHE = JSON.stringify(salvarHE)
                 localStorage.setItem("habilidadesEcompetencias", salvandoHE)
 
-                let salvarNL = new areasVidas(1, Math.round(mediaNL))
+                let salvarNL = new areasVidas1(Math.round(mediaNL))
                 let salvandoNL = JSON.stringify(salvarNL)
                 localStorage.setItem("nivelamento", salvandoNL)
 
-                let salvarEHE = new areasVidas(2, Math.round(mediaEHE))
+                let salvarEHE = new areasVidas2(Math.round(mediaEHE))
                 let salvandoEHE = JSON.stringify(salvarEHE)
                 localStorage.setItem("estHabitoEstudo", salvandoEHE)
 
+                console.log('teste de localstorage')
                 window.open('quiz2.html', "_self")
             }
         })

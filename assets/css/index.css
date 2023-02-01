@@ -907,3 +907,35 @@ section {
         padding: 0;
     }
 }
+
+/*--------------------------------------------------------------
+# Form Section
+--------------------------------------------------------------*/
+.form-content {
+    width: 40%;
+}
+
+form {
+    margin-top: 30px;
+}
+
+@media (max-width: 991px) {
+    .form-content {
+        width: 80%;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .form-content {
+        width: 100%;
+    }
+    
+    form {
+        margin-top: 0px;
+    }
+}
