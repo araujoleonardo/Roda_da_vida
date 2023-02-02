@@ -1,19 +1,19 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "localstorage";
-$port = 3306;
+    $dbHost = 'localhost';
+    $dbUsername = 'root';
+    $dbPassword = '';
+    $dbName = 'roda_vida';
 
-try{
-    //Conexão com a porta
-    //$conn = new PDO("mysql:host=$host;port=$port;dbname=" . $dbname, $user, $pass);
+    //$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
-    //Conexão sem a porta
-    $conn = new PDO("mysql:host=$host;dbname=" . $dbname, $user, $pass);
+    // Conecta ao banco de dados
+    $conexao = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
 
-    //echo "Conexão com banco de dados realizado com sucesso!";
-}  catch(PDOException $err){
-    die("Erro: Conexão com banco de dados não foi realizada com sucesso. Erro gerado " . $err->getMessage());
-}
+    // Verifica se a conexão foi bem sucedida
+    // if (!$conexao) {
+    //     die("Conexão falhou: " . mysqli_connect_error());
+    // }else {
+    //     echo "Conexão realizada";
+    // }
+    

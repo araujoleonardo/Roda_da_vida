@@ -33,6 +33,15 @@ document.getElementById('save-data').addEventListener('click', function() {
     let habilidadesData = JSON.parse(localStorage.getItem('habilidadesEcompetencias'));
     let nivelamentoData = JSON.parse(localStorage.getItem('nivelamento'));
     let estHabitoData = JSON.parse(localStorage.getItem('estHabitoEstudo'));
+    let saudeFisica = JSON.parse(localStorage.getItem('saudeFisica'))
+    let saudeMental = JSON.parse(localStorage.getItem('saudeMental'))
+    let bemEstar = JSON.parse(localStorage.getItem('bemEstar'))
+    let equidade = JSON.parse(localStorage.getItem('equidade'))
+    let integracao = JSON.parse(localStorage.getItem('integracao'))
+    let acesAutonomia = JSON.parse(localStorage.getItem('acessibilidadeAutonomia'))
+    let protIntegral = JSON.parse(localStorage.getItem('protecaoIntegral'))
+    let respSocial = JSON.parse(localStorage.getItem('responsabilidadeSocial'))
+    let cidConvivencia = JSON.parse(localStorage.getItem('cidadaniaConvivencia'))
 
     let data = {
         nome: usuarioData.nome,
@@ -41,7 +50,16 @@ document.getElementById('save-data').addEventListener('click', function() {
         telefone: usuarioData.telefone,
         nota1: habilidadesData.nota1,
         nota2: nivelamentoData.nota2,
-        nota3: estHabitoData.nota3
+        nota3: estHabitoData.nota3,
+        nota4: saudeFisica.nota4,
+        nota5: saudeMental.nota5,
+        nota6: bemEstar.nota6,
+        nota7: equidade.nota7,
+        nota8: integracao.nota8,
+        nota9: acesAutonomia.nota9,
+        nota10: protIntegral.nota10,
+        nota11: respSocial.nota11,
+        nota12: cidConvivencia.nota12
     };
 
     // Envia os dados para o script PHP via AJAX
@@ -51,6 +69,7 @@ document.getElementById('save-data').addEventListener('click', function() {
         data: { data: JSON.stringify(data) },
         success: function(response) {
             console.log(response);
+            console.log(data);
         }
     });
 });
