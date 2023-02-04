@@ -1,5 +1,4 @@
 $(document).ready(()=>{
-  $("#ad1, #ad2, #ad3, #si1, #si2, #si3, #id1, #id2, #id3, #gdp1, #gdp2, #gdp3").hide()
 
   recuperaDados()
 
