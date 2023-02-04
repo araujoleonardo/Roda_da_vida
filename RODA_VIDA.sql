@@ -14,13 +14,5 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `nota2` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nota3` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nota4` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nota5` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nota6` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nota7` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nota8` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nota9` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nota10` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nota11` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nota12` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
