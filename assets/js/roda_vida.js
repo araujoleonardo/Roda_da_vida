@@ -1,5 +1,4 @@
 $(document).ready(()=>{
-  $("#ad1, #ad2, #ad3, #si1, #si2, #si3, #id1, #id2, #id3, #gdp1, #gdp2, #gdp3").hide()
 
   recuperaDados()
 
@@ -82,18 +81,18 @@ $(document).ready(()=>{
         window.open('index.html', "_self")
     }
 
-    if(heCompetencias){var hc = (heCompetencias.nota);}
-    if(nivelamento){var nv = (nivelamento.nota);}
-    if(estHabitoEstudo){var ee = (estHabitoEstudo.nota);}
-    if(saudeFisica){var sf = (saudeFisica.nota);}
-    if(saudeMental){var sm = (saudeMental.nota);}
-    if(bemEstar){var be = (bemEstar.nota);}
-    if(equidade){var eq = (equidade.nota);}
-    if(integracao){var it = (integracao.nota);}
-    if(acesAutonomia){var aa = (acesAutonomia.nota);}
-    if(protIntegral){var pi = (protIntegral.nota);}
-    if(respSocial){var rs = (respSocial.nota);}
-    if(cidConvivencia){var cc = (cidConvivencia.nota);}
+    if(heCompetencias){var hc = (heCompetencias.nota1);}
+    if(nivelamento){var nv = (nivelamento.nota2);}
+    if(estHabitoEstudo){var ee = (estHabitoEstudo.nota3);}
+    if(saudeFisica){var sf = (saudeFisica.nota4);}
+    if(saudeMental){var sm = (saudeMental.nota5);}
+    if(bemEstar){var be = (bemEstar.nota6);}
+    if(equidade){var eq = (equidade.nota7);}
+    if(integracao){var it = (integracao.nota8);}
+    if(acesAutonomia){var aa = (acesAutonomia.nota9);}
+    if(protIntegral){var pi = (protIntegral.nota10);}
+    if(respSocial){var rs = (respSocial.nota11);}
+    if(cidConvivencia){var cc = (cidConvivencia.nota12);}
 
 
     var data = [{

@@ -22,12 +22,91 @@ $(document).ready(() => {
             }
         }
 
+        class areasVidas3 {
+            constructor(nota4) {
+                this.nota4 = nota4
+            }
+        }
+
+        class areasVidas4 {
+            constructor(nota5) {
+                this.nota5 = nota5
+            }
+        }
+
+        class areasVidas5 {
+            constructor(nota6) {
+                this.nota6 = nota6
+            }
+        }
+
+        class areasVidas6 {
+            constructor(nota7) {
+                this.nota7 = nota7
+            }
+        }
+
+        class areasVidas7 {
+            constructor(nota8) {
+                this.nota8 = nota8
+            }
+        }
+
+        class areasVidas8 {
+            constructor(nota9) {
+                this.nota9 = nota9
+            }
+        }
+
+        class areasVidas9 {
+            constructor(nota10) {
+                this.nota10 = nota10
+            }
+        }
+
+        class areasVidas10 {
+            constructor(nota11) {
+                this.nota11 = nota11
+            }
+        }
+
+        class areasVidas11 {
+            constructor(nota12) {
+                this.nota12 = nota12
+            }
+        }
+
         // ******************************************* AREA HOME *******************************************
         $("#btn0").click(() => {
-            console.log('teste de localstorage')
-            window.open('quiz1.html', "_self")
+            window.open('form.html', "_self")
         })
 
+        // ******************************************* AREA FORM *******************************************
+        // Aguardar o usuário ao clicar no botão cadastrar do formulário
+        $("#submit").click(() => {
+
+            class objUsuario {
+                constructor(nome, matricula, email, telefone) {
+                    this.nome = nome
+                    this.matricula = matricula
+                    this.email = email
+                    this.telefone = telefone
+                }
+            }
+
+            // Receber os dados do formulário
+            var nome = document.getElementById("nome").value;
+            var matricula = document.getElementById("matricula").value;
+            var email = document.getElementById("email").value;
+            var telefone = document.getElementById("telefone").value;
+
+            //Salvar no localstorage
+            let usuario = new objUsuario(nome, matricula, email, telefone);
+            localStorage.setItem("usuario", JSON.stringify(usuario));
+
+            window.open('quiz1.html', "_self")
+
+        });
 
         // ******************************************* AREA RECUPERAR DADOS *******************************************
         $("#btn1").click(() => {
@@ -135,15 +214,15 @@ $(document).ready(() => {
                 console.log(mediaBE)
 
                 // salvando no logalStorage
-                let salvarSF = new areasVidas(3, Math.round(mediaSF))
+                let salvarSF = new areasVidas3(Math.round(mediaSF))
                 let salvandoSF = JSON.stringify(salvarSF)
                 localStorage.setItem("saudeFisica", salvandoSF)
 
-                let salvarSM = new areasVidas(4, Math.round(mediaSM))
+                let salvarSM = new areasVidas4(Math.round(mediaSM))
                 let salvandoSM = JSON.stringify(salvarSM)
                 localStorage.setItem("saudeMental", salvandoSM)
 
-                let salvarBE = new areasVidas(5, Math.round(mediaBE))
+                let salvarBE = new areasVidas5(Math.round(mediaBE))
                 let salvandoBE = JSON.stringify(salvarBE)
                 localStorage.setItem("bemEstar", salvandoBE)
 
@@ -195,15 +274,15 @@ $(document).ready(() => {
                 console.log(mediaAA)
 
                 // salvando no logalStorage
-                let salvarEQ = new areasVidas(6, Math.round(mediaEQ))
+                let salvarEQ = new areasVidas6(Math.round(mediaEQ))
                 let salvandoEQ = JSON.stringify(salvarEQ)
                 localStorage.setItem("equidade", salvandoEQ)
 
-                let salvarIT = new areasVidas(7, Math.round(mediaIT))
+                let salvarIT = new areasVidas7(Math.round(mediaIT))
                 let salvandoIT = JSON.stringify(salvarIT)
                 localStorage.setItem("integracao", salvandoIT)
 
-                let salvarAA = new areasVidas(8, Math.round(mediaAA))
+                let salvarAA = new areasVidas8(Math.round(mediaAA))
                 let salvandoAA = JSON.stringify(salvarAA)
                 localStorage.setItem("acessibilidadeAutonomia", salvandoAA)
 
@@ -255,17 +334,64 @@ $(document).ready(() => {
                 console.log(mediaCC)
 
                 // salvando no logalStorage
-                let salvarPI = new areasVidas(9, Math.round(mediaPI))
+                let salvarPI = new areasVidas9(Math.round(mediaPI))
                 let salvandoPI = JSON.stringify(salvarPI)
                 localStorage.setItem("protecaoIntegral", salvandoPI)
 
-                let salvarRS = new areasVidas(10, Math.round(mediaRS))
+                let salvarRS = new areasVidas10(Math.round(mediaRS))
                 let salvandoRS = JSON.stringify(salvarRS)
                 localStorage.setItem("responsabilidadeSocial", salvandoRS)
 
-                let salvarCC = new areasVidas(11, Math.round(mediaCC))
+                let salvarCC = new areasVidas11(Math.round(mediaCC))
                 let salvandoCC = JSON.stringify(salvarCC)
                 localStorage.setItem("cidadaniaConvivencia", salvandoCC)
+
+                
+
+                // Recupera os dados do localstorage
+                let usuarioData = JSON.parse(localStorage.getItem('usuario'));
+                let habilidadesData = JSON.parse(localStorage.getItem('habilidadesEcompetencias'));
+                let nivelamentoData = JSON.parse(localStorage.getItem('nivelamento'));
+                let estHabitoData = JSON.parse(localStorage.getItem('estHabitoEstudo'));
+                let saudeFisica = JSON.parse(localStorage.getItem('saudeFisica'))
+                let saudeMental = JSON.parse(localStorage.getItem('saudeMental'))
+                let bemEstar = JSON.parse(localStorage.getItem('bemEstar'))
+                let equidade = JSON.parse(localStorage.getItem('equidade'))
+                let integracao = JSON.parse(localStorage.getItem('integracao'))
+                let acesAutonomia = JSON.parse(localStorage.getItem('acessibilidadeAutonomia'))
+                let protIntegral = JSON.parse(localStorage.getItem('protecaoIntegral'))
+                let respSocial = JSON.parse(localStorage.getItem('responsabilidadeSocial'))
+                let cidConvivencia = JSON.parse(localStorage.getItem('cidadaniaConvivencia'))
+
+                let data = {
+                    nome: usuarioData.nome,
+                    matricula: usuarioData.matricula,
+                    email: usuarioData.email,
+                    telefone: usuarioData.telefone,
+                    nota1: habilidadesData.nota1,
+                    nota2: nivelamentoData.nota2,
+                    nota3: estHabitoData.nota3,
+                    nota4: saudeFisica.nota4,
+                    nota5: saudeMental.nota5,
+                    nota6: bemEstar.nota6,
+                    nota7: equidade.nota7,
+                    nota8: integracao.nota8,
+                    nota9: acesAutonomia.nota9,
+                    nota10: protIntegral.nota10,
+                    nota11: respSocial.nota11,
+                    nota12: cidConvivencia.nota12
+                };
+
+                // Envia os dados para o script PHP via AJAX
+                $.ajax({
+                    type: 'POST',
+                    url: 'salvar.php',
+                    data: { data: JSON.stringify(data) },
+                    success: function(response) {
+                        console.log(response);
+                        console.log(data);
+                    }
+                });
 
                 window.open('grafico.html', "_self")
             }

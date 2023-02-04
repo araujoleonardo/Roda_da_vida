@@ -68,17 +68,8 @@
                                     <h1 style="background-color: #DC5892;">UNIVERSITÁRIO</h1>
                                 </div>
                                 <div>
-                                    <p>
-                                        Oiê ;)
-                                        <br><br>
-                                        Essa é a Roda de Acolhimento Universitário - PUCPR! <br>
-                                        Uma ferramenta desenvolvida para te ajudar a ter uma visão
-                                        de como algumas áreas da sua vida acadêmica estão!
-                                    </p>
-                                </div>
-                                <div>
-                                    <h2>
-                                        Aqui nós vamos falar sobre saúde, aprendizagem, direitos e inclusão!
+                                    <h2 style="margin-top: 20px;">
+                                        Preencha o formulário abaixo com seus dados para continuar.
                                     </h2>
                                 </div>
                             </div>
@@ -92,7 +83,6 @@
                 </section><!-- End Hero -->
 
                 <!-- ======= Form Section ======= -->
-                <button id="save-data">Salvar Dados</button>
                 <section id="form" class="form">                    
 
                     <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
@@ -111,17 +101,19 @@
         
                                     <div class="form-group">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control form-control-lg" name="email" id="email">
+                                        <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="fulano@exemplo.com">
                                     </div>
         
                                     <div class="form-group">
                                         <label for="telefone" class="form-label">Telefone</label>
-                                        <input type="text" class="form-control form-control-lg" name="telefone" id="telefone">
+                                        <input type="text" class="form-control form-control-lg" name="telefone" id="telefone" placeholder="(00) 00000-0000">
                                     </div>
                                 </div>
                             </div>                                              
                             <div class="d-flex justify-content-end">
-                                <input type="submit" class="button btn-info" value="Continuar">
+                                <button type="button" class="button btn-info" id="submit">
+                                    Continuar
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -156,11 +148,21 @@
     </main>
 
     <!-- Vendor JS Files -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function(){
     
-    <script src="assets/js/custom.js"></script>
+            $('#telefone').mask('(00) 00000-0000');
+    
+        });
+        </script>
 </body>
 </html>
