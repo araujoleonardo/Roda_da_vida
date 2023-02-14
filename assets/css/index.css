@@ -6,8 +6,16 @@ body {
     color: #444444;
 }
 
+<<<<<<< HEAD
 p {
     text-align: justify;
+=======
+span{
+    font-size: 12px;
+    margin: 3px 0 0 1px;
+    color: rgb(245, 6, 6);
+    display: none;
+>>>>>>> a86b726b7c33a18580b3865dfedee1d570bba150
 }
 
 /*--------------------------------------------------------------
@@ -909,5 +917,37 @@ section {
     #footer .credits ul {
         margin: 0;
         padding: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+# Form Section
+--------------------------------------------------------------*/
+.form-content {
+    width: 40%;
+}
+
+form {
+    margin-top: 30px;
+}
+
+@media (max-width: 991px) {
+    .form-content {
+        width: 80%;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .form-content {
+        width: 100%;
+    }
+    
+    form {
+        margin-top: 0px;
     }
 }
